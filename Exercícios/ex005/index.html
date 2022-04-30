@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Exercício 5</title>
+
+	<link rel="stylesheet" type="text/css" href="../../CSS/style.css">
+
+	<script type="text/javascript">
+		alert('Seja bem vindo ao meu site!!')
+		function calcular() {
+			var resultado = document.getElementById('resultado')
+			var num = Number(prompt('Digite um número: '))
+
+			resultado.innerHTML = `O dobro de ${num} é ${num * 2} e a metade é ${num / 2}`
+		}
+	</script>
+</head>
+<body>
+	<h1>Trabalhando com números</h1>
+
+	<button onclick="calcular()">Clique aqui para calcular</button>
+
+	<p id="resultado">O resultado irá aparecer aqui...</p>
+</body>
+</html>

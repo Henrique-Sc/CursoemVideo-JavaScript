@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Exercício 4</title>
+
+	<link rel="stylesheet" type="text/css" href="../../CSS/style.css">
+
+	<script type="text/javascript">
+		function mostrarNome() {
+			var resultado = document.getElementById('resultado')
+			var nome = window.prompt('Qual o seu nome? ')
+			resultado.innerHTML = `Olá <strong>${nome}</strong>! É um prazer te conhecer :3`
+		}
+	</script>
+</head>
+<body>
+	<h1>Trabalhando com dados v2.0</h1>
+
+	<button onclick="mostrarNome()">Aperte aqui!</button>
+	<p id="resultado">O resultado vai aparecer aqui...</p>
+</body>
+</html>

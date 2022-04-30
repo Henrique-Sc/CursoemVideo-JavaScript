@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Exercício 6</title>
+
+	<link rel="stylesheet" type="text/css" href="../../CSS/style.css">
+
+	<script type="text/javascript">
+		function calcular() {
+			var resultado = document.getElementById('resultado')
+			var num1 = Number(prompt('Digite o primeiro número: '))
+			var num2 = Number(prompt('Digite o segundo número: '))
+
+			resultado.innerHTML = `A soma entre <mark>${num1}</mark> e <mark>${num2}</mark> é <strong>${num1 + num2}!</strong>`
+		}
+	</script>
+</head>
+<body>
+	<h1>Somando dois números</h1>
+
+	<button onclick="calcular()">Calcular</button>
+
+	<p id="resultado">O resultado irá aparecer aqui...</p>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Exercício 7</title>
+
+	<link rel="stylesheet" type="text/css" href="../../CSS/style.css">
+
+	<script type="text/javascript">
+		function media() {
+			var resultado = document.getElementById('resultado')
+			var nome = prompt('Qual o nome do aluno?')
+			var nota1 = Number(prompt(`Qual foi a primeira nota de ${nome}?`))
+			var nota2 = Number(prompt(`E qual foi a segunda nota?`))
+			var media = (nota1 + nota2) / 2
+
+			resultado.innerHTML = `
+				<hr>
+				Média de <strong>${nome}</strong> <br>
+				Primeira nota: <mark>${nota1}</mark> <br>
+				Segunda nota: <mark>${nota2}</mark> <br>
+				Média final: <mark>${media}</mark>
+ 			`
+		}
+	</script>
+</head>
+<body>
+	<h1>Média do aluno v1.0</h1>
+
+	<button onclick="media()">Calcular média</button>
+
+	<p id="resultado">O resultado irá aparecer aqui...</p>
+</body>
+</html>
