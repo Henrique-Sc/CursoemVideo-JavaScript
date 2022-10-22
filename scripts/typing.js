@@ -1,16 +1,3 @@
-// var string = "Javascript Typing Animation"; /* type your text here */
-// var array = string.split("");
-// var timer;
-
-// function frameLooper () {
-// if (array.length > 0) {
-//     document.getElementById("text").innerHTML += array.shift();
-// } else {
-//     clearTimeout(timer);
-//     }
-// loopTimer = setTimeout('frameLooper()',70); /* change 70 for speed */
-
-// }
 function typingVar() {
     document.body.style.color = 'white';
     element = document.getElementById('animation-typing');
@@ -26,9 +13,16 @@ function typing() {
         element.innerHTML += string.shift();
     } else {
         document.body.style.color = 'black'
+        bar()
         clearTimeout(timer);
     }
 
-    console.log(string)
     LoopTimer = setTimeout('typing()', 100);
+}
+
+function bar() {
+    while (true) {
+        element.innerHTML += '_';
+        element.innerHTML = substring(0, element.innerHTML.length-1)
+    }
 }
