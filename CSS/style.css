@@ -1,8 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
 
+* {
+	margin: 0;
+}
+
 body {
 	font-family: arial;
 	font-size: 16px;
+	background: rgb(4,0,66);
+background: linear-gradient(90deg, rgba(4,0,66,0.8491771708683473) 0%, rgba(19,137,207,1) 35%, rgba(0,212,255,1) 100%);
 }
 
 h1, h2, h3 {
@@ -15,4 +21,19 @@ button {
 	font-size: 16px;
 	user-select: none;
 	cursor: pointer;
+}
+
+.container {
+	background: white;
+	width: 80vw;
+	height: 100vh;
+	margin: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	box-shadow: rgb(35, 35, 35) 5px 5px 18px;
+	padding: 15px;
+}
+
+.radius {
+	border-radius: 15px;
 }
