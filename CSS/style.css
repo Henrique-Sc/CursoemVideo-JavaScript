@@ -5,16 +5,17 @@
 }
 
 body {
-	font-family: arial;
+	font-family: Consolas;
+	box-sizing: border-box;
 	font-size: 16px;
 	background: rgb(4,0,66);
-background: linear-gradient(90deg, rgba(4,0,66,0.8491771708683473) 0%, rgba(19,137,207,1) 35%, rgba(0,212,255,1) 100%);
+	background: linear-gradient(90deg, rgba(4,0,66,0.8491771708683473) 0%, rgba(19,137,207,1) 35%, rgba(0,212,255,1) 100%);
 }
 
-h1, h2, h3 {
+/* h1, h2, h3 {
 	font-family: Pacifico, cursive;
 	font-weight: normal;
-}
+} */
 
 button {
 	padding: 10px;
