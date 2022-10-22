@@ -11,10 +11,11 @@ function typingVar() {
 function typingText() {
     if (string.length > 0) {
         element.innerHTML += string.shift();
+        LoopTimer = setTimeout('typingText()', 100);
     } else {
+        element.innerHTML += '_'
         document.body.style.color = 'black'
-        clearTimeout(timer);
+        clearTimeout(0);
+        setTimeout(a = () => {}, 100)
     }
-
-    LoopTimer = setTimeout('typing()', 100);
 }
