@@ -3,17 +3,16 @@ function typingVar() {
     element = document.getElementById('animation-typing');
     string = element.innerHTML.split('');
     element.innerHTML = ''
-    typingText()
+    setTimeout('typingText()', 1000);
 }
 
 function typingText() {
     if (string.length > 0) {
         element.innerHTML += string.shift();
-        setTimeout('typingText()', 100);
+        setTimeout('typingText()', 120);
     } else {
         element.innerHTML += '_'
-        document.getElementById('content-animation-typing').style.visibility = 'visible'
         clearTimeout(0);
-        setTimeout(a = () => {}, 300)
+        setTimeout(a = () => {document.getElementById('content-animation-typing').style.visibility = 'visible'}, 500)
     }
 }
