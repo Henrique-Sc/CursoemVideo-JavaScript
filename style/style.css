@@ -18,8 +18,8 @@ body {
 	margin: auto;
 	margin-top: 10px;
 	margin-bottom: 10px;
-	box-shadow: rgb(35, 35, 35) 5px 5px 18px;
 	padding: 15px;
+	box-shadow: rgb(35, 35, 35) 5px 5px 18px;
 }
 
 .radius {
@@ -29,10 +29,22 @@ body {
 
 /* CONTEUDO */
 
+.title h1 {
+	text-align: center;
+}
+
 .msg {
-	background-color: rgb(206, 206, 206);
+	background-color: rgba(240, 240, 240, 0.664);
 	padding: 15px;
 	font-size: 13px;
+	margin-bottom: 15px;
+	box-shadow: rgb(116, 116, 116) 3px 3px 10px;
+}
+
+.msg img {
+	float: left;
+	margin-right: 20px;
+	width: 60px;
 }
 
 /* h1, h2, h3 {
@@ -46,5 +58,10 @@ button {
 	user-select: none;
 	cursor: pointer;
 }
+
+.creditos, .creditos a:visited, .creditos a:link {
+	color: rgb(160, 160, 160);
+}
+
 
 /* CONTEUDO */
