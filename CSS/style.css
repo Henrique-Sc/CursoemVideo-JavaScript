@@ -10,18 +10,6 @@ body {
 	background: linear-gradient(90deg, rgba(4,0,66,0.8491771708683473) 0%, rgba(19,137,207,1) 35%, rgba(0,212,255,1) 100%);
 }
 
-/* h1, h2, h3 {
-	font-family: Pacifico, cursive;
-	font-weight: normal;
-} */
-
-button {
-	padding: 10px;
-	font-size: 16px;
-	user-select: none;
-	cursor: pointer;
-}
-
 .container {
 	background: white;
 	max-width: 500px;
@@ -37,3 +25,26 @@ button {
 .radius {
 	border-radius: 15px;
 }
+
+
+/* CONTEUDO */
+
+.msg {
+	background-color: rgb(206, 206, 206);
+	padding: 15px;
+	font-size: 13px;
+}
+
+/* h1, h2, h3 {
+	font-family: Pacifico, cursive;
+	font-weight: normal;
+} */
+
+button {
+	padding: 10px;
+	font-size: 16px;
+	user-select: none;
+	cursor: pointer;
+}
+
+/* CONTEUDO */
