@@ -13,8 +13,8 @@ body {
 
 .container {
 	background: white;
-	max-width: 500px;
 	width: 80vw;
+	max-width: 600px;
 	height: auto;
 	margin: auto;
 	margin-top: 10px;
@@ -30,13 +30,15 @@ body {
 
 /* CONTEUDO */
 
-.title h1 {
+h1.title {
 	text-align: center;
 }
 
 .msg {
 	background-color: rgba(240, 240, 240, 0.664);
 	padding: 15px;
+	max-width: 500px;
+	margin: auto;
 	font-size: 13px;
 	margin-bottom: 20px;
 	box-shadow: rgb(116, 116, 116) 3px 3px 10px;
@@ -73,3 +75,15 @@ button {
 
 
 /* CONTEUDO */
+
+
+@media only screen and (min-width: 1400px) {
+	body {
+		font-size: 22px;
+		line-height: 28px;
+	}
+
+	.msg {
+		font-size: 18px;
+	}
+}
