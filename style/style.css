@@ -6,6 +6,7 @@ body {
 	font-family: consolas;
 	box-sizing: border-box;
 	font-size: 16px;
+	line-height: 22px;
 	background: rgb(4,0,66);
 	background: linear-gradient(90deg, rgba(4,0,66,0.8491771708683473) 0%, rgba(19,137,207,1) 35%, rgba(0,212,255,1) 100%);
 }
@@ -37,7 +38,7 @@ body {
 	background-color: rgba(240, 240, 240, 0.664);
 	padding: 15px;
 	font-size: 13px;
-	margin-bottom: 15px;
+	margin-bottom: 20px;
 	box-shadow: rgb(116, 116, 116) 3px 3px 10px;
 }
 
@@ -47,10 +48,17 @@ body {
 	width: 60px;
 }
 
-/* h1, h2, h3 {
-	font-family: Pacifico, cursive;
+.command {
+	background: rgba(206, 206, 206, 0.658);
+	border-radius: 6px;
+	padding-left: 6px;
+	padding-right: 6px;
+}
+
+h1, h2, h3 {
+	line-height: normal;
 	font-weight: normal;
-} */
+}
 
 button {
 	padding: 10px;
