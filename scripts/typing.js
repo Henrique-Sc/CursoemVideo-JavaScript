@@ -1,7 +1,6 @@
 function typingVar() {
-    document.body.style.color = 'white';
+    document.getElementById('content-animation-typing').style.visibility = 'hidden'
     element = document.getElementById('animation-typing');
-    element.style.color = 'black';
     string = element.innerHTML.split('');
     element.innerHTML = ''
     typingText()
@@ -13,7 +12,7 @@ function typingText() {
         setTimeout('typingText()', 100);
     } else {
         element.innerHTML += '_'
-        document.body.style.color = 'black'
+        document.getElementById('content-animation-typing').style.visibility = 'visible'
         clearTimeout(0);
         setTimeout(a = () => {}, 300)
     }
