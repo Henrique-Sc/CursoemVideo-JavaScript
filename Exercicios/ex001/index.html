@@ -9,15 +9,31 @@
 
 	<link rel="stylesheet" type="text/css" href="../../style/style.css">
 
-	<script type="text/javascript">
-		window.alert('Minha primeira mensagem')
+	<script>
+		var a = () => {
+			window.alert('Essa é a minha primeira mensagem')
+			var result = document.getElementById('result')
+	
+			
+			if (window.confirm('Está gostando de JS?')) {
+				result.innerHTML += `<p>Que bom que está gostando!</p>`
+			} else {
+				result.innerHTML += `<p>Que pena que não está gostando, mas logo logo você vai!</p>`
+			}
+	
+			var nome = window.prompt('Qual o seu nome?')
+			if (nome == '') {
+				nome = "&#60;desconhecido&#62;"
+			}
+			result.innerHTML += `<p>Olá ${nome}!</p>`
+		}
 	</script>
 </head>
-<body>
+<body onload="a()">
 
 	<div class="container radius">
 		<h1 class="title">Exercício 01</h1>
-		<h3>Olá mundo!</h3>
+		<h2>Olá mundo!</h3>
 
         <section id="result">
 			<p>Esse é o meu primeiro script :)</p>
