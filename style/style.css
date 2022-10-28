@@ -50,11 +50,16 @@ h1.title {
 	width: 60px;
 }
 
-.command {
+.code {
 	background: rgba(206, 206, 206, 0.658);
 	border-radius: 6px;
 	padding-left: 6px;
 	padding-right: 6px;
+	font-style: normal;
+}
+
+.descricao {
+	font-style: italic;
 }
 
 h1, h2, h3 {
