@@ -27,6 +27,24 @@
 - `s.toUpperCase()` - TUDO PARA MAIÚSCULO
 - `s.tolowerCase()` - tudo para minúsculo
 
-*`s.toLowerCase()` e `s.toUpperCase()` funciona com acentos*
+*`s.toLowerCase()` e o `s.toUpperCase()` funcionam com acentos*
+
+### Formatar números
+
+Decimal:
+```
+var n1 = 1545.5
+
+n1.toFixed(2)  // 1545.50
+```
+
+Contábil:
+```
+var n1 = 1545.5
+
+n1.toFixed(2).replace('.', ',')  // 1545,00
+
+n1.toLocaleString('pt-br', {style: 'currency', 'currency': 'BRL'})  // R$ 1.545,50
+```
 
 [Gustavo Guanabara - Curso de JavaScript](https://gustavoguanabara.github.io/javascript/)
