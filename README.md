@@ -59,6 +59,15 @@ n1.toLocaleString('pt-br', {style: 'currency', 'currency': 'BRL'})  // R$ 1.545,
 ### Operadores
 
 - Aritméticos
+ ```
+5 + 2 = 7    // Soma
+5 - 2 = 3    // Subtração
+5 * 2 = 10   // Multiplicação
+5 / 2 = 2.5  // Divisão
+5 % 2 = 1    // Resto da divisão inteira
+5 ** 2 = 25  // Potência
+ ```
+
 
 - Atribuição
 
