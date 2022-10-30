@@ -7,27 +7,27 @@
 
 # Anotações
 
-### Converter números
+## Converter números
  - `Number.parseInt(n)` - inteiro
  - `Number.parseFloat(n)` - decimal
  - `Number(n)` - inteiro ou decimal
 
 ---
 
-### Converter números para string
+## Converter números para string
 - `n.toString()`
 - `String(n)`
 
 ---
 
-### Interpolação / Template strings
+## Interpolação / Template strings
 - `O aluno ${nome} tirou a nota ${nota}`
 
 *${ } = placeholder*
 
 ---
 
-### Formatar strings
+## Formatar strings
 - `s.length` - retorna quantos caracteres tem a string
 - `s.toUpperCase()` - TUDO PARA MAIÚSCULO
 - `s.tolowerCase()` - tudo para minúsculo
@@ -36,16 +36,16 @@
 
 ---
 
-### Formatar números
+## Formatar números
 
-#### Decimal:
+### Decimal:
 ```
 var n1 = 1545.5
 
 n1.toFixed(2)  // 1545.50
 ```
 
-#### Contábil:
+### Contábil:
 ```
 var n1 = 1545.5
 
@@ -56,9 +56,9 @@ n1.toLocaleString('pt-br', {style: 'currency', 'currency': 'BRL'})  // R$ 1.545,
 
 ---
 
-### Operadores
+## Operadores
 
-- Aritméticos
+### Aritméticos
  ```
 5 + 2   // 7   - Soma
 5 - 2   // 3   - Subtração
@@ -67,15 +67,24 @@ n1.toLocaleString('pt-br', {style: 'currency', 'currency': 'BRL'})  // R$ 1.545,
 5 % 2   // 1   - Resto da divisão inteira
 5 ** 2  // 25  - Potência
  ```
+ 
+ Ordem de precendência:
+1. `( )`
+2. `**`
+3. `* /`
+4. `+ -`
+
+### Atribuição
 
 
-- Atribuição
 
-- Relacionais
+### Relacionais
 
-- Lógicos
 
-- Ternário
+### Lógicos
+
+
+### Ternário
 
 ---
 
