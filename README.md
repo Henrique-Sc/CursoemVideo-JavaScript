@@ -183,8 +183,8 @@ a > b && b % 2 == 0   // false && true -> false
 a <= b || b / 2 == 2  // true || false -> true
 ```
 
-Precedência
-
+Ordem de precedência
+![Ordem de precedência](imagens/Screenshot_2.png)
 ### Ternário
 
 ---
