@@ -116,6 +116,26 @@ x--  // 5
 
 ### Relacionais
 
+```
+5 > 2   // maior -> true
+7 < 4   // menor -> false
+8 >= 8  // maior ou igual -> true
+9 <= 7  // menor ou igual -> false
+5 == 5  // igual -> true
+4 != 4  // diferente -> false
+```
+
+Identidade
+```
+5 == 5     // igual -> true
+5 == '5'   // igual -> true
+5 === 5    // idêntico -> true
+5 === '5'  // idêntico -> false
+5 !== '5'  // desigual restrito -> false
+
+/* idêntico: mesmo valor e mesmo tipo */
+```
+
 
 ### Lógicos
 
@@ -124,7 +144,7 @@ x--  // 5
 
 ---
 
-### Analisar um valor
+## Analisar um valor
 
 ```
 var n = 10
