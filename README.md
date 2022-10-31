@@ -116,41 +116,51 @@ x--  // 5
 
 ### Relacionais
 
-Operador | Nome               | Função
- ---     | ---                | ---
- `>`     | Maior que          | Verifica se um valor é maior que outro
- `<`     | Menor que          | Verifica se um valor é menor que outro
- `>=`    | Maior ou igual que | Verifica se um valor é maior ou igual ao outro
- `<=`    | Menor ou igual que | Verifica se um valor é menor ou igual ao outro
- `==`    | Igual a            | Verifica se um valor é igual ao outro
- `!=`    | Diferente de       | Verifica se um valor é diferente ao outro
+Operador  | Nome               | Função
+ -------- | ------------------ | ----------------------------------------------
+ `>`      | Maior              | Verifica se um valor é maior que outro
+ `<`      | Menor              | Verifica se um valor é menor que outro
+ `>=`     | Maior ou igual     | Verifica se um valor é maior ou igual ao outro
+ `<=`     | Menor ou igual     | Verifica se um valor é menor ou igual ao outro
+ `==`     | Igual              | Verifica se um valor é igual ao outro
+ `!=`     | Diferente          | Verifica se um valor não é igual ao outro
+ `===`    | Idêntico           | Verifica se um valor é idêntico ao outro
+ `!==`    | Desigual restrito  | Verifica se um valor não é idêntico ao outro
 
-
+Exemplos:
 ```
-5 > 2   // maior -> true
-7 < 4   // menor -> false
-8 >= 8  // maior ou igual -> true
-9 <= 7  // menor ou igual -> false
-5 == 5  // igual -> true
-4 != 4  // diferente -> false
-```
-
-Identidade
-```
-5 == 5     // igual -> true
-5 == '5'   // igual -> true
-5 === 5    // idêntico -> true
-5 === '5'  // idêntico -> false
-5 !== '5'  // desigual restrito -> false
+5 > 2      // true
+7 < 4      // false
+8 >= 8     // true
+9 <= 7     // false
+5 == 5     // true
+4 != 4     // false
+5 === 5    // true
+5 === '5'  // false
+5 !== '5'  // false
 
 /* idêntico: mesmo valor e mesmo tipo */
 ```
 
 ### Lógicos
+
+<table>
+    <tr>
+        <th>Operador</th> <th>Nome</th> <th>Função</th> 
+    </tr>
+    <tr> 
+        <td>!</td> <td>Negação (not / não)</td> <td>Retorna Falso se o resultado for verdadeiro</td> 
+    </tr>
+    <tr>
+        <td>&&</td> <td>Conjunção (and / e)</td> <td>Retorna True se ambas as afirmações forem verdadeiras</td> 
+    </tr>
+    <tr>
+        <td>||</td> <td>Disjunção (or / ou)</td> <td>Retorna True se uma das afirmações for verdadeira</td> 
+    </tr>
+</table>
+
+Exemplos
 ```
-!   // negação (not / não)
-&&  // cojunção (and / e)
-||  // disjunção (or / ou)
 
 ```
 
