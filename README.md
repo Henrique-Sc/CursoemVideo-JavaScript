@@ -184,9 +184,30 @@ a <= b || b / 2 == 2  // true || false -> true
 ```
 
 Ordem de precedência
-![Ordem de precedência](imagens/Screenshot_2.png)
+
+<img src='imagens/Screenshot_2.png' height="350px">
+
 ### Ternário
 
+```
+teste ? true : false
+```
+
+Exemplo:
+```
+var media = 5.5
+
+media >= 7.0 ? 'Aprovado' : 'Reprovado'  // 'Reprovado'
+media += 3                               //  8.5
+media >= 7.0 ? 'Aprovado' : 'Reprovado'  // 'Aprovado'
+
+/* ----------------------------------------------- */
+
+var x = 8
+
+var result = x % 2 == 0 ? 5 : 9  // result = 5
+
+```
 ---
 
 ## Analisar um valor
