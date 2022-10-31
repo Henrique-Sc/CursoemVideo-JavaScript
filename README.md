@@ -159,10 +159,31 @@ Exemplos:
     </tr>
 </table>
 
-Exemplos
+```
+! true   // false
+! false  // true
+
+true && true    // true
+true && false   // false
+false && true   // false
+false && false  // false
+
+true || true    // true
+true || false   // true
+false || true   // true
+false || false  // false
 ```
 
+Exemplo:
 ```
+var a = 5
+var b = 8
+
+a > b && b % 2 == 0   // false && true -> false
+a <= b || b / 2 == 2  // true || false -> true
+```
+
+Precedência
 
 ### Ternário
 
