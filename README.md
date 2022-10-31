@@ -116,6 +116,16 @@ x--  // 5
 
 ### Relacionais
 
+Operador | Nome               | Função
+ ---     | ---                | ---
+ `>`     | Maior que          | Verifica se um valor é maior que outro
+ `<`     | Menor que          | Verifica se um valor é menor que outro
+ `>=`    | Maior ou igual que | Verifica se um valor é maior ou igual ao outro
+ `<=`    | Menor ou igual que | Verifica se um valor é menor ou igual ao outro
+ `==`    | Igual a            | Verifica se um valor é igual ao outro
+ `!=`    | Diferente de       | Verifica se um valor é diferente ao outro
+
+
 ```
 5 > 2   // maior -> true
 7 < 4   // menor -> false
@@ -136,9 +146,13 @@ Identidade
 /* idêntico: mesmo valor e mesmo tipo */
 ```
 
-
 ### Lógicos
+```
+!   // negação (not / não)
+&&  // cojunção (and / e)
+||  // disjunção (or / ou)
 
+```
 
 ### Ternário
 
