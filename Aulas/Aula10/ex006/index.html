@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Exercício 6</title>
+
+	<link rel="stylesheet" type="text/css" href="../../../style/style.css">
+
+	<style>
+		div#area {
+			background-color: green;
+			width: 80%;
+			height: 30vh;
+			line-height: 30vh;
+			user-select: none;
+			margin: auto;			
+		}
+	</style>
+</head>
+<body>
+	<div class="container radius">
+		<h1 class="title">Exercício 6</h1>
+		<h3 class="descricao textCenter">Eventos <abbr title="Document Object Model">DOM</abbr>.</h3>
+		
+
+		<div id="area" class="textCenter radius">
+			Interaja...
+		</div>
+
+
+    </div>
+
+	<script>
+		var div = document.querySelector('div#area')
+		div.addEventListener('click', clicar)
+		div.addEventListener('mouseenter', entrar)
+		div.addEventListener('mouseout', sair)
+		
+		// Métodos
+		function clicar() {
+			div.innerHTML = 'Clicou!'
+			div.style.backgroundColor = 'red'
+		}
+
+		function entrar() {
+			div.innerHTML = 'Entrou!'
+		}
+
+		function sair() {
+			div.innerHTML = 'Saiu!'
+			div.style.backgroundColor = 'green'
+		}
+	</script>
+</body>
+</html>
