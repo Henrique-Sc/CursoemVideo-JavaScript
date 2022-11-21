@@ -15,18 +15,25 @@
 		<h1 class="title">Exercício 7</h1>
 		<h3 class="descricao ">Somando valores</h3>
 
-		<input type="number" id="n1">
-		<input type="number" id="n2">
+		<input type="number" name="n1" id="n1" placeholder="1º número">
+		<input type="number" name="n2" id="n2" placeholder="2º número">
+		<button onclick="somar()">Somar</button>
 
-		<!-- 
-			<section id="result" name="result" class="result">
-				<p>O resultado aparecerá aqui...</p>
-			</section>
-		 -->
+		<section id="result" name="result" class="result">
+			<p>O resultado aparecerá aqui...</p>
+		</section>
+	
     </div>
 
 	<script>
-		
+		function somar() {
+			var result = document.querySelector('#result')
+			var n1 = Number(document.querySelector('#n1').value)
+			var n2 = Number(document.querySelector('#n2').value)
+			var soma = n1 + n2
+
+			result.innerHTML = `<p>A soma entre ${n1} e ${n2} é igual a ${soma}</p>`
+		}
 	</script>
 </body>
 </html>
