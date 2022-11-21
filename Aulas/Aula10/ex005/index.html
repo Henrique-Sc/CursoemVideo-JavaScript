@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Exercício 5</title>
+
+	<link rel="stylesheet" type="text/css" href="../../../style/style.css">
+
+</head>
+<body>
+	<div class="container radius">
+		<h1 class="title">Exercício 5</h1>
+		<h3 class="descricao">Iniciando os estudos com <abbr title="Document Object Model">DOM</abbr>.</h3>
+		
+		<button onclick="dom()">Clique em mim</button>
+			
+		<section id="result" name="result" class="result">
+			<p>O resultado aparecerá aqui...</p>
+		</section>
+
+    </div>
+
+	<script>
+		function dom() {
+			// var result = document.getElementsByName('result')
+			// var result = document.getElementsByTagName('section')[0]
+			// var result = document.getElementById('result')
+			// var result = document.getElementsByClassName('result')[0]
+			var result = document.querySelector('section#result')
+
+			result.innerHTML = `
+				<p id="p1">Eu utilizei o DOM para mudar a cor e o texto!</p>
+				<p id="p2">URL: ${document.URL}</p>
+			`
+
+			document.querySelector('p#p1').style.color = "blue"
+			document.querySelector('p#p2').style.color = "red"
+		}
+	</script>
+</body>
+</html>
