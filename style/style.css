@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
+:root {
+	--margin-form: 15px;
+	--heigthInput: 30px;
+	--radius: 15px;
+}
 
 body {
 	font-family: consolas;
@@ -29,7 +34,7 @@ body {
 }
 
 .radius {
-	border-radius: 15px;
+	border-radius: var(--radius);
 }
 
 
@@ -72,13 +77,29 @@ h1, h2, h3 {
 	font-weight: normal;
 }
 
+input {
+	display: block;
+	height: var(--heigthInput);
+	outline: none;
+	border: 1px solid;
+	padding-left: 15px;
+	border-radius: var(--radius);
+	margin-top: var(--margin-form);
+}
+
 button {
-	padding: 7px;
-	font-size: 16px;
-	border-radius: 20px;
+	margin-top: var(--margin-form);
+	height: var(--heigthInput);
+	min-width: 100px;
+	font-size: 14px;
+	border-radius: var(--radius);
 	border: solid 1px;
 	user-select: none;
 	cursor: pointer;
+}
+
+#result {
+	font-style: italic;
 }
 
 .creditos, .creditos a:visited, .creditos a:link {
