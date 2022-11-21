@@ -24,6 +24,10 @@ body {
 	overflow: auto;
 }
 
+.textCenter {
+	text-align: center;
+}
+
 .radius {
 	border-radius: 15px;
 }
