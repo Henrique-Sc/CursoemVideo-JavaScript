@@ -13,11 +13,18 @@
 <body>
 	<div class="container radius">
 		<h1 class="title">Exercício 9</h1>
-		<h3 class="descricao textCenter">Nacionalidade</h3>
+		<h3 class="descricao textCenter">Nacionalidade V1.0</h3>
 
 		<label for="paises">Em que país você nasceu?</label>
 		<select id="paises">
 			<option value="brasil">Brasil</option>
+			<option value="eua">Estado Unidos</option>
+			<option value="canadá">Canadá</option>
+			<option value="frança">França</option>
+			<option value="méxico">México</option>
+			<option value="espanha">Espanha</option>
+
+
 		</select>
 		
 		<button onclick="verificar()">Verificar</button>
@@ -31,13 +38,15 @@
 	<script>
 		function verificar() {
 			var res = document.querySelector('#result')
-			var vel = Number(document.querySelector('#vel').value)
-
-			res.innerHTML = `<p>Sua velocidade é de <strong>${vel}Km/h</strong>.</p>`
-			if (vel > 60) {
-				res.innerHTML += `<p>Você está <strong>MUTADO</strong> por excesso de velocidade.</p>`
+			var pais  = document.querySelector('#paises').value
+			
+			if (pais == 'brasil') {
+				res.innerHTML = `<p>Você é brasileiro(a)</p>`
+			} else {
+				res.innerHTML = `<p>Você é estrangeiro(a)</p>`
 			}
-			res.innerHTML += `<p>Dirija sempre com cinto de segurança!</p>`
+
+			
 		}
 	</script>
 </body>
