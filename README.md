@@ -227,4 +227,36 @@ typeof b               // 'boolean'
 typeof b == 'boolean'  // true
 ```
 
+
+## DOM
+
+### Pegar elementos na tela
+
+Comando | Resultado
+ --- | ---
+`document.getElementById('result')` | Pegar elemento pelo id
+`document.getELementsByClassName('code')` | Pegar elementos pela classe
+`document.getELementsByTagName('div')` | Pegar elementos pela tag HTML
+`document.getELementsByName('email')`  | Pegar elementos pelo nome
+`document.querySelector('div#result')` | Pegar elementos pela classe ou id
+
+### Eventos
+
+* [Lista de eventos](https://developer.mozilla.org/en-US/docs/Web/Events)
+
+
+## Condições
+
+
+
+```
+if (condição) {
+    // True
+} else {
+    // False
+}
+```
+
+---
+
 [Gustavo Guanabara - Curso de JavaScript](https://gustavoguanabara.github.io/javascript/)
