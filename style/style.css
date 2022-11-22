@@ -3,6 +3,7 @@
 
 :root {
 	--margin-form: 15px;
+	--widthInput: 96%;
 	--heigthInput: 30px;
 	--radius: 15px;
 }
@@ -80,6 +81,8 @@ h1, h2, h3 {
 input {
 	display: block;
 	height: var(--heigthInput);
+	width: var(--widthInput);
+	max-width: 185px;
 	outline: none;
 	border: 1px solid;
 	padding-left: 15px;
