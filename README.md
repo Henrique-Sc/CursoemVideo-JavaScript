@@ -258,16 +258,17 @@ if (condição) {
 }
 ```
 
-### Condição simples
+### Tipos de condição
 
-1º tipo:
+1. Condição simples:
 ```
 if (condição) {
     // True
 }
 ```
 
-2º tipo:
+<!--
+2.
 ```
 if (condição) {
     // True
@@ -275,6 +276,7 @@ if (condição) {
     // False
 }
 ```
+-->
 ---
 
 [Gustavo Guanabara - Curso de JavaScript](https://gustavoguanabara.github.io/javascript/)
