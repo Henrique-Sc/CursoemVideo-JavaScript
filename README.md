@@ -267,8 +267,7 @@ if (condição) {
 }
 ```
 
-<!--
-2.
+2. Condição composta:
 ```
 if (condição) {
     // True
@@ -276,7 +275,7 @@ if (condição) {
     // False
 }
 ```
--->
+
 ---
 
 [Gustavo Guanabara - Curso de JavaScript](https://gustavoguanabara.github.io/javascript/)
