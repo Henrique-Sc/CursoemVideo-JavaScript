@@ -247,6 +247,7 @@ Comando | Resultado
 
 ## Condições
 
+<img width="300px" src="https://user-images.githubusercontent.com/96785101/203353138-f6f1c461-58e1-4025-834c-57d0ed8261f5.png">
 
 
 ```
@@ -257,6 +258,23 @@ if (condição) {
 }
 ```
 
+### Condição simples
+
+1º tipo:
+```
+if (condição) {
+    // True
+}
+```
+
+2º tipo:
+```
+if (condição) {
+    // True
+} else {
+    // False
+}
+```
 ---
 
 [Gustavo Guanabara - Curso de JavaScript](https://gustavoguanabara.github.io/javascript/)
