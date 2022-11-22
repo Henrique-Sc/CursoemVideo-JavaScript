@@ -78,25 +78,30 @@ h1, h2, h3 {
 	font-weight: normal;
 }
 
-input {
+select, input {
 	display: block;
+
 	height: var(--heigthInput);
 	width: var(--widthInput);
 	max-width: 185px;
-	outline: none;
-	border: 1px solid;
-	padding-left: 15px;
-	border-radius: var(--radius);
+
 	margin-top: var(--margin-form);
+	padding-left: 15px;
+
+	border: 1px solid;
+	border-radius: var(--radius);
+	outline: none;
 }
 
 button {
-	margin-top: var(--margin-form);
 	height: var(--heigthInput);
 	min-width: 100px;
-	font-size: 14px;
-	border-radius: var(--radius);
+
+	margin-top: var(--margin-form);
 	border: solid 1px;
+	border-radius: var(--radius);
+	
+	font-size: 14px;
 	user-select: none;
 	cursor: pointer;
 }
