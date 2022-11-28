@@ -296,6 +296,8 @@ if (condição) {
 
 4. Condição múltipla:
 <img width="207" alt="image" src="https://user-images.githubusercontent.com/96785101/204298769-16aee496-052f-428b-9fcf-9876dd7303cd.png">
+<img width="207" alt="image" src="https://user-images.githubusercontent.com/96785101/204300471-ca17b06b-4871-47fa-b509-fbaab652582a.png">
+<img width="207" alt="image" src="https://user-images.githubusercontent.com/96785101/204300641-8306c3c4-579f-44e8-beae-267a3da29e5e.png">
 
 
 ---
