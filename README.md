@@ -292,6 +292,7 @@ if (condição) {
 }
 ```
 
+
 ---
 
 [Gustavo Guanabara - Curso de JavaScript](https://gustavoguanabara.github.io/javascript/)
