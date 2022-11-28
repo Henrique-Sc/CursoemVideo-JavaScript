@@ -297,11 +297,6 @@ if (condição) {
 4. Condição múltipla:
 <img width="207" alt="image" src="https://user-images.githubusercontent.com/96785101/204298769-16aee496-052f-428b-9fcf-9876dd7303cd.png">
 
-```
-switch (expressão) {
-
-}
-```
 
 ---
 
