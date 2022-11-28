@@ -18,7 +18,4 @@ if (hora < 5) {
 
 } else if (hora <= 23){
     console.log('Tenha uma boa noite!')
-
-} else {
-    
 }
