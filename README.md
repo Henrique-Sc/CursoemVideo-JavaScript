@@ -276,6 +276,22 @@ if (condição) {
 }
 ```
 
+3. Condições aninhadas:
+```
+if (condição) {
+    // True
+
+} else {
+    // False
+
+    if (condição) {
+        // True
+    } else {
+        //True
+    }
+}
+```
+
 ---
 
 [Gustavo Guanabara - Curso de JavaScript](https://gustavoguanabara.github.io/javascript/)
