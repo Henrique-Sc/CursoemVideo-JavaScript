@@ -277,6 +277,8 @@ if (condição) {
 ```
 
 3. Condições aninhadas:
+<img width="205" alt="image" src="https://user-images.githubusercontent.com/96785101/204299367-bad5ee94-4427-42a5-8584-7099a4f802b7.png">
+
 ```
 if (condição) {
     // True
@@ -292,6 +294,14 @@ if (condição) {
 }
 ```
 
+4. Condição múltipla:
+<img width="207" alt="image" src="https://user-images.githubusercontent.com/96785101/204298769-16aee496-052f-428b-9fcf-9876dd7303cd.png">
+
+```
+switch (expressão) {
+
+}
+```
 
 ---
 
