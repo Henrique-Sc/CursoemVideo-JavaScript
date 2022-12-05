@@ -9,21 +9,48 @@
 
 	<link rel="stylesheet" type="text/css" href="../../../style/style.css">
 
+	<style>
+		.descricao {
+			font-style: normal;
+		}
+	</style>
 </head>
-<body>
+<body onload="analisar()">
 	<div class="container radius">
 		<h1 class="title">Desafio 1</h1>
-		<h3 class="descricao textCenter">Hora do dia</h3>
+		<h3 class="descricao textCenter" id="hora-do-dia"></h3><!--Hora do dia-->
 
 		<div class="img">
-			<img src="images/night.jpg">
+			<img src="" id="img">
 		</div>
 	
     </div>
 
 	<script>
-		var res = document.querySelector('#result')
+		function analisar() {
+			// Variáveis de output
+			var horaDoDia = document.querySelector('#hora-do-dia')
+			var img = document.querySelector('#img')
 
+			// Variáveis do horário
+			var data = new Date()
+			var hora = 5
+			var min = data.getMinutes()
+			
+			horaDoDia.innerHTML = `Hora do dia: ${hora}:${min}`
+			if (hora <= 5 || hora > 19) {
+				img.src = 'images/night-1.1.jpg'
+
+			} else if (hora < 12) {
+				img.src = 'images/sunrise-1.1.jpg'
+
+			} else if (hora < 18) {
+				img.src = 'images/noon-1.1.jpg'
+
+			} else if (hora <= 19) {
+				img.src = 'images/sunset-1.1.jpg'
+			}
+		}
 	</script>
 </body>
 </html>
