@@ -41,14 +41,14 @@ body {
 
 /* CONTEUDO */
 div.img {
-	background-color: rgb(177, 213, 213);
 	text-align: center;
-	margin: auto;
 	width: 100%;
 }
 
 .img img {
 	width: 80%;
+	max-width: 250px;
+	border-radius: 100%;
 }
 
 h1.title {
