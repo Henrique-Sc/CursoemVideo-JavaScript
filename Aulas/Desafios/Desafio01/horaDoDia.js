@@ -7,7 +7,6 @@ function analisar() {
     // Variáveis do horário
     var data = new Date()
     var hora = data.getHours()
-    var hora = 20
     var min = data.getMinutes()
     
     horaDoDia.innerHTML = `Hora do dia: ${hora}:${min}`
