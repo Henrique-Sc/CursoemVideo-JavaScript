@@ -7,20 +7,24 @@ function analisar() {
     // Variáveis do horário
     var data = new Date()
     var hora = data.getHours()
-    var hora = 4
+    var hora = 20
     var min = data.getMinutes()
     
     horaDoDia.innerHTML = `Hora do dia: ${hora}:${min}`
-    if (hora <= 5 || hora > 19) {
+    if (hora <= 5 || hora > 19) {  // Noite
         img.src = 'images/night-1.1.jpg'
-        body.style.background = '#232323'
-    } else if (hora < 12) {
+        body.style.background = '#192133'
+
+    } else if (hora < 12) {  // Nascer do sol
         img.src = 'images/sunrise-1.1.jpg'
+        body.style.background = '#FDB355'
 
-    } else if (hora < 18) {
+    } else if (hora < 18) {  // Meio dia - tarde
         img.src = 'images/noon-1.1.jpg'
+        body.style.background = '#6EAEFC'
 
-    } else if (hora <= 19) {
+    } else if (hora <= 19) {  // Por do sol
         img.src = 'images/sunset-1.1.jpg'
+        body.style.background = '#ED4010'
     }
 }
