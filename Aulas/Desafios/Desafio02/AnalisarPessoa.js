@@ -1,15 +1,17 @@
 function analisar() {
     var data = new Date()
-    var sexo
 
-    var anoNascimento = Number(document.querySelector('#anoNascimento').value)
+    // Variáveis de output
+    var dataNascimento = document.querySelector('#dataNascimento').value
     var sexoRadio = document.getElementsByName('sexo')
+    var sexo = 0
     sexoRadio.forEach(radio => {
         if (radio.checked) {
             sexo = radio.value
-        } else {
-            sexo = false
+            
         }
+
+        console.log(sexo)
     })
 
     // Variáveis de output
@@ -17,9 +19,6 @@ function analisar() {
     var result_img = document.querySelector('#result_img')
 
     // Verificar se os inputs estão vazios
-    if (anoNascimento < 1800 || sexo == false) {
-        alert('Valores inválidos!')
-    }
-
-    idade = data.getFullYear() - anoNascimento
+    // anoNascimento = dataNascimento.split('-')[0]
+    // idade = data.getFullYear() - anoNascimento
 }
