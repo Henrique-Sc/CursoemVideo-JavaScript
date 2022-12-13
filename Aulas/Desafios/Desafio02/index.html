@@ -10,21 +10,23 @@
 	<link rel="stylesheet" type="text/css" href="../../../style/style.css">
 
 </head>
-<body onload="analisar()" id="body">
+<body>
 	<div class="container radius">
 		<h1 class="title">Desafio 2</h1>
 		<h3 class="descricao textCenter">Verificador de idade</h3>
 
 		<!-- Forms -->
-		<input id="idade" class="input-text" type="number" step="1" value="2020" min="1800" max="2022" id="vel" placeholder="Ano de nascimento">
+		<p>Ano de nascimento:</p>
+		<input id="anoNascimento" class="input-text" type="" step="1" min="1800" max="2022" id="vel">
 
-		<input type="radio" name="sexo" id="masc" value="masc">
+		<p>Sexo:</p>
+		<input type="radio" class="input-radio" name="sexo" id="masc" value="masc">
 		<label for="masc">Masculino</label>
 
-		<input type="radio" name="sexo" id="femi" value="femi">
+		<input type="radio" class="input-radio" name="sexo" id="femi" value="femi">
 		<label for="femi">Feminino</label>
 
-		<button onclick="verificar()">Verificar</button>
+		<button onclick="analisar()">Verificar</button>
 		<!-- Forms -->
 
 		<div class="img">
