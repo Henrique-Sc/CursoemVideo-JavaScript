@@ -55,6 +55,10 @@ h1.title {
 	text-align: center;
 }
 
+p.title-form {
+	margin: 0;
+}
+
 .msg {
 	background-color: rgba(240, 240, 240, 0.664);
 	padding: 15px;
@@ -93,16 +97,13 @@ select, .input-text {
 	height: var(--heigthInput);
 	width: var(--widthInput);
 	max-width: 185px;
-	margin-top: var(--margin-form);
+	margin-bottom: var(--margin-form);
 	padding-left: 15px;
 	border: 1px solid;
 	border-radius: var(--radius);
 	outline: none;
 }
 
-.input-radio {
-	margin-top: 10px;
-}
 
 option {
 	font-size: 14px;
