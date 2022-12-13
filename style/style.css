@@ -98,7 +98,7 @@ select, .input-text {
 	width: var(--widthInput);
 	max-width: 185px;
 	margin-bottom: var(--margin-form);
-	padding-left: 15px;
+	padding: 0px 15px 0px 15px;
 	border: 1px solid;
 	border-radius: var(--radius);
 	outline: none;
