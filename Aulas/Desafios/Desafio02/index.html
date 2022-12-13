@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Desafio 2</title>
+
+	<link rel="stylesheet" type="text/css" href="../../../style/style.css">
+
+</head>
+<body onload="analisar()" id="body">
+	<div class="container radius">
+		<h1 class="title">Desafio 2</h1>
+		<h3 class="descricao textCenter">Verificador de idade</h3>
+
+		<!-- Forms -->
+		<input id="idade" class="input-text" type="number" step="1" value="2020" min="1800" max="2022" id="vel" placeholder="Ano de nascimento">
+
+		<input type="radio" name="sexo" id="masc" value="masc">
+		<label for="masc">Masculino</label>
+
+		<input type="radio" name="sexo" id="femi" value="femi">
+		<label for="femi">Feminino</label>
+
+		<button onclick="verificar()">Verificar</button>
+		<!-- Forms -->
+
+		<div class="img">
+			<p id="result_desc"></p>
+			<img src="" id="result_img">
+		</div>
+	
+    </div>
+
+	<script src="AnalisarPessoa.js"></script>
+</body>
+</html>
