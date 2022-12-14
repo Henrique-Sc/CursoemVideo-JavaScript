@@ -29,11 +29,16 @@ function analisar() {
         var dataAtual = [data.getFullYear(), data.getMonth() + 1, data.getDate()]
         var idade = dataAtual[0] - dataNascimento[0]
 
-        // Verificar se a pessoa j 
+        // Verificar se a pessoa ja fez aniversário
+        console.log(dataNascimento, dataAtual)
         if (dataNascimento[1] < dataAtual[1]) {
-            console.log('não fez anivesário')
+            console.log('não fez anivesário - mês anterior')
+        } else if (dataNascimento[1] == dataAtual[1]) {
+            if (dataNascimento[2] < dataAtual[2]) {
+                console.log('não fez aniversário - dia anterior')
+            }
         }
-        console.log(idade)
+        console.log(`Você tem ${idade} anos`)
 
         // Analisar a idade do indivíduo e mostrar uma imagem da sua faxa etária
     }
