@@ -122,6 +122,10 @@ button {
 	cursor: pointer;
 }
 
+label {
+	user-select: none;
+}
+
 #result {
 	font-style: italic;
 }
