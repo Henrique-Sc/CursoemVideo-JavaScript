@@ -9,15 +9,18 @@
 
 	<link rel="stylesheet" type="text/css" href="../../../style/style.css">
 
+	<script src="scripts/VerificarIdade.js"></script>
+	<script src="scripts/FormatarInput.js"></script>
+
 </head>
-<body>
+<body onload="FormatarInput()">
 	<div class="container radius">
 		<h1 class="title">Desafio 2</h1>
 		<h3 class="descricao textCenter">Verificador de idade</h3>
 
 		<!-- Forms -->
 		<p>Data de nascimento:</p>
-		<input id="dataNascimento" class="input-text" type="date" step="1" min="1800" max="2022" id="vel">
+		<input type="date" class="input-text" id="dataNascimento" placeholder="Data de nascimento" min="" max="">
 
 		<p>Sexo:</p>
 		<input type="radio" class="input-radio" name="sexo" id="masc" value="masc">
@@ -35,6 +38,5 @@
 	
     </div>
 
-	<script src="VerificarIdade.js"></script>
 </body>
 </html>
