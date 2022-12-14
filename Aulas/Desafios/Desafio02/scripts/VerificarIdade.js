@@ -3,9 +3,10 @@ function analisar() {
 
     // Variáveis de output
     var dataNascimento = document.querySelector('#dataNascimento').value
+    dataNascimento = dataNascimento.split('-')  // yyyy-mm-dd
     var sexoRadio = document.getElementsByName('sexo')
 
-    // Variáveis de output
+    // Variáveis de input
     var result_desc = document.querySelector('#result_desc')
     var result_img = document.querySelector('#result_img')
 
@@ -18,16 +19,22 @@ function analisar() {
     })
 
     // Analisar se os inputs estão com os dados corretos
-    if (dataNascimento == '') {
+    if (dataNascimento == '' || dataNascimento[0] > data.getFullYear() || sexo == 0) {
         // Inputs vazios ou dados incorretos
         alert('Valores inválidos!')
     } else {
         // Valores corretos
-        
 
         // Quantos anos a pessoa tem
-    
-    
+        var dataAtual = [data.getFullYear(), data.getMonth() + 1, data.getDate()]
+        var idade = dataAtual[0] - dataNascimento[0]
+
+        // Verificar se a pessoa j 
+        if (dataNascimento[1] < dataAtual[1]) {
+            console.log('não fez anivesário')
+        }
+        console.log(idade)
+
         // Analisar a idade do indivíduo e mostrar uma imagem da sua faxa etária
     }
 
