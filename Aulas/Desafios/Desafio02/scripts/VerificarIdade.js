@@ -1,12 +1,12 @@
 function analisar() {
     var data = new Date()
 
-    // Variáveis de output
+    // Variáveis de input
     var dataNascimento = document.querySelector('#dataNascimento').value
     dataNascimento = dataNascimento.split('-')  // yyyy-mm-dd
     var sexoRadio = document.getElementsByName('sexo')
 
-    // Variáveis de input
+    // Variáveis de output
     var result_desc = document.querySelector('#result_desc')
     var result_img = document.querySelector('#result_img')
 
@@ -19,7 +19,7 @@ function analisar() {
     })
 
     // Analisar se os inputs estão com os dados corretos
-    if (dataNascimento == '' || dataNascimento[0] > data.getFullYear() || sexo == 0) {
+    if (dataNascimento == '' || dataNascimento[0] > data.getFullYear() || dataNascimento[0] < 1860 || sexo == 0) {
         // Inputs vazios ou dados incorretos
         alert('Valores inválidos!')
     } else {
@@ -30,17 +30,17 @@ function analisar() {
         var idade = dataAtual[0] - dataNascimento[0]
 
         // Verificar se a pessoa ja fez aniversário
-        console.log(dataNascimento, dataAtual)
-        if (dataNascimento[1] < dataAtual[1]) {
-            console.log('não fez anivesário - mês anterior')
+        if (dataAtual[1] < dataNascimento[1]) {
+            idade--
         } else if (dataNascimento[1] == dataAtual[1]) {
-            if (dataNascimento[2] < dataAtual[2]) {
-                console.log('não fez aniversário - dia anterior')
+            if (dataAtual[2] < dataNascimento[2]) {
+                idade--
             }
         }
-        console.log(`Você tem ${idade} anos`)
 
-        // Analisar a idade do indivíduo e mostrar uma imagem da sua faxa etária
+        // Mostrar resultado
+        result_desc.innerHTML = `Você tem ${idade} anos de idade.`
+        // result_img
     }
 
     
