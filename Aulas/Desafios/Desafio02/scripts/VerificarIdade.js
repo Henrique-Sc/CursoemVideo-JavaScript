@@ -39,7 +39,7 @@ function analisar() {
         }
 
         // Mostrar resultado
-        result_desc.innerHTML = `Você tem ${idade} anos de idade.`
+        result_desc.innerHTML = `Você tem ${idade} anos de idade!`
         // result_img
     }
 
