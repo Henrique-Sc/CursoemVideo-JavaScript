@@ -37,9 +37,39 @@ function analisar() {
         }
 
         // Mostrar resultado
-        // var faixaEtaria = "adolescente"
-        // result_desc.innerHTML = `Você é um(a) ${faixaEtaria} com ${idade} anos de idade!`
-        // result_img.src = `images/${sexo}-0-4.jpg`
+        var faixaEtaria = 'centenário(a)'
+        var img = '-100.jpg'
+
+        if (idade < 5) {
+            faixaEtaria = 'bebê'
+            img = '-0-4.jpg'
+        } else if (idade < 10) {
+            faixaEtaria = 'criança'
+            img = '-5-9.jpg'
+        } else if (idade < 14) {
+            faixaEtaria = 'pré-adolescente'
+            img = '-10-13.jpg'
+        } else if (idade < 18) {
+            faixaEtaria = 'adolescente'
+            img = '-14-17.jpg'
+        } else if (idade < 60) {
+            faixaEtaria = 'adulto(a)'
+            if (idade < 29) {
+                img = '-18-28.jpg'
+            } else if (idade < 41) {
+                img = '-29-40.jpg'
+            } else if (idade < 51) {
+                img = '-41-50.jpg'
+            } else {
+                img = '-51-59.jpg'
+            }               
+        } else if (idade < 100) {
+            faixaEtaria = 'idoso(a)'
+            img = '-60-99.jpg'
+        }
+
+        result_desc.innerHTML = `Você é um(a) ${faixaEtaria} com ${idade} anos de idade!`
+        result_img.src = `images/${sexo}${img}`
     }
 
     
