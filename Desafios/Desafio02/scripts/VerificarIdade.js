@@ -1,5 +1,6 @@
 function analisar() {
     var data = new Date()
+    var dataAtual = [data.getFullYear(), data.getMonth() + 1, data.getDate()]
 
     // Variáveis de input
     var dataNascimento = document.querySelector('#dataNascimento').value
@@ -20,27 +21,25 @@ function analisar() {
 
     // Analisar se os inputs estão com os dados corretos
     if (dataNascimento == '' || dataNascimento[0] > data.getFullYear() || dataNascimento[0] < 1860 || sexo == 0) {
-        // Inputs vazios ou dados incorretos
         alert('Valores inválidos!')
-    } else {
-        // Valores corretos
 
+    } else {
         // Quantos anos a pessoa tem
-        var dataAtual = [data.getFullYear(), data.getMonth() + 1, data.getDate()]
         var idade = dataAtual[0] - dataNascimento[0]
 
         // Verificar se a pessoa ja fez aniversário
-        if (dataAtual[1] < dataNascimento[1]) {
+        if (dataAtual[1] < dataNascimento[1]) {  // Não chegou no mês do aniversário
             idade--
-        } else if (dataNascimento[1] == dataAtual[1]) {
-            if (dataAtual[2] < dataNascimento[2]) {
+        } else if (dataNascimento[1] == dataAtual[1]) {  // É o mês do seu aniversário
+            if (dataAtual[2] < dataNascimento[2]) {  // Não chegou no dia do aniversário
                 idade--
             }
         }
 
         // Mostrar resultado
-        result_desc.innerHTML = `Você tem ${idade} anos de idade!`
-        // result_img
+        // var faixaEtaria = "adolescente"
+        // result_desc.innerHTML = `Você é um(a) ${faixaEtaria} com ${idade} anos de idade!`
+        // result_img.src = `images/${sexo}-0-4.jpg`
     }
 
     
