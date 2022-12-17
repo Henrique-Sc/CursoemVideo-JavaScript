@@ -1,10 +1,10 @@
 function analisar() {
     var data = new Date()
-    var dataAtual = [data.getFullYear(), data.getMonth() + 1, data.getDate()] // yyyy-mm-dd
+    var dataAtual = [data.getDate(), data.getMonth() + 1, data.getFullYear()] // dd, mm, yyyy
 
     // Variáveis de input
     var dataNascimento = document.querySelector('#dataNascimento').value
-    dataNascimento = dataNascimento.split('-')  // yyyy-mm-dd
+    var newDataNascimento = dataNascimento.split('/')  // dd, mm, yyyy
     var sexoRadio = document.getElementsByName('sexo')
     
     // Pegar o valor do radio buttons
@@ -19,17 +19,37 @@ function analisar() {
     var result = document.querySelector('#result')
 
     // Validação dos dados
-    if (dataNascimento == '' || dataNascimento[0] > dataAtual[0] || dataNascimento[0] < 1900 || sexo == 0 || (dataAtual[0] == dataNascimento[0] && dataAtual[1] == dataNascimento[1] && dataAtual[2] < dataNascimento[2])) {
-        alert('Valores inválidos! Corrija-os e tente novamente.')
-    } else {
+    erro = 'Valores inválidos! Corrija-os e tente novamente.'
+    mes31 = [1, 3, 5, 7, 8, 10, 12]
+    mes30 = [4, 6, 9, 11]
+    console.log(newDataNascimento[2]);
+    if (newDataNascimento == '' || newDataNascimento[2] > dataAtual[2] || newDataNascimento[2] < 1900 || newDataNascimento[1] > 12 || sexo == 0 || dataNascimento.length != 10 || newDataNascimento[0] < 1 || newDataNascimento[1] < 1) {
+        alert(erro)
+    } else if ((dataAtual[2] == newDataNascimento[2] && dataAtual[1] == newDataNascimento[1] && dataAtual[0] < newDataNascimento[0])) {
+        alert(erro)
+    } else if (mes31.includes(Number(newDataNascimento[1])) && newDataNascimento[0] > 31) {  // Dia maior que 31
+        alert(erro)
+    } else if (mes30.includes(Number(newDataNascimento[1])) && newDataNascimento[0] > 30) {  // Dia maior que 30
+        alert(erro)
+    } else if ((newDataNascimento[2] % 4 == 0 && newDataNascimento[1] == 2 && newDataNascimento[0] > 29)) {
+        alert(erro)
+        console.log(1);
+    } else if ((newDataNascimento[2] % 4 != 0 && newDataNascimento[1] == 2 && newDataNascimento[0] > 28)) {
+        alert(erro)
+        console.log(2);
+    }
+    
+    else {
+        
+
         // Quantos anos a pessoa tem
-        var idade = dataAtual[0] - dataNascimento[0]
+        var idade = dataAtual[2] - newDataNascimento[2]
 
         // Verificar se a pessoa ja fez aniversário
-        if (dataAtual[1] < dataNascimento[1]) {  // Não chegou no mês do aniversário
+        if (dataAtual[1] < newDataNascimento[1]) {  // Não chegou no mês do aniversário
             idade--
-        } else if (dataNascimento[1] == dataAtual[1]) {  // É o mês do seu aniversário
-            if (dataAtual[2] < dataNascimento[2]) {  // Não chegou no dia do aniversário
+        } else if (newDataNascimento[1] == dataAtual[1]) {  // É o mês do seu aniversário
+            if (dataAtual[0] < newDataNascimento[0]) {  // Não chegou no dia do aniversário
                 idade--
             }
         }
