@@ -1,17 +1,13 @@
 function analisar() {
     var data = new Date()
-    var dataAtual = [data.getFullYear(), data.getMonth() + 1, data.getDate()]
+    var dataAtual = [data.getFullYear(), data.getMonth() + 1, data.getDate()] // yyyy-mm-dd
 
     // Variáveis de input
     var dataNascimento = document.querySelector('#dataNascimento').value
     dataNascimento = dataNascimento.split('-')  // yyyy-mm-dd
     var sexoRadio = document.getElementsByName('sexo')
-
-    // Variáveis de output
-    var result_desc = document.querySelector('#result_desc')
-    var result_img = document.querySelector('#result_img')
-
-    // Pegar o valor dos radios buttons
+    
+    // Pegar o valor do radio buttons
     var sexo = 0
     sexoRadio.forEach(radio => {
         if (radio.checked) {
@@ -19,10 +15,12 @@ function analisar() {
         }
     })
 
-    // Analisar se os inputs estão com os dados corretos
-    if (dataNascimento == '' || dataNascimento[0] > data.getFullYear() || dataNascimento[0] < 1860 || sexo == 0) {
-        alert('Valores inválidos!')
+    // Variável de output
+    var result = document.querySelector('#result')
 
+    // Validação dos dados
+    if (dataNascimento == '' || dataNascimento[0] > dataAtual[0] || dataNascimento[0] < 1900 || sexo == 0 || (dataAtual[0] == dataNascimento[0] && dataAtual[1] == dataNascimento[1] && dataAtual[2] < dataNascimento[2])) {
+        alert('Valores inválidos! Corrija-os e tente novamente.')
     } else {
         // Quantos anos a pessoa tem
         var idade = dataAtual[0] - dataNascimento[0]
@@ -38,38 +36,44 @@ function analisar() {
 
         // Mostrar resultado
         var faixaEtaria = 'centenário(a)'
-        var img = '-100.jpg'
+        var imgNameFile = '-100.jpg'
 
         if (idade < 5) {
             faixaEtaria = 'bebê'
-            img = '-0-4.jpg'
+            imgNameFile = '-0-4.jpg'
         } else if (idade < 10) {
             faixaEtaria = 'criança'
-            img = '-5-9.jpg'
+            imgNameFile = '-5-9.jpg'
         } else if (idade < 14) {
             faixaEtaria = 'pré-adolescente'
-            img = '-10-13.jpg'
+            imgNameFile = '-10-13.jpg'
         } else if (idade < 18) {
             faixaEtaria = 'adolescente'
-            img = '-14-17.jpg'
+            imgNameFile = '-14-17.jpg'
         } else if (idade < 60) {
             faixaEtaria = 'adulto(a)'
             if (idade < 29) {
-                img = '-18-28.jpg'
+                imgNameFile = '-18-28.jpg'
             } else if (idade < 41) {
-                img = '-29-40.jpg'
+                imgNameFile = '-29-40.jpg'
             } else if (idade < 51) {
-                img = '-41-50.jpg'
+                imgNameFile = '-41-50.jpg'
             } else {
-                img = '-51-59.jpg'
+                imgNameFile = '-51-59.jpg'
             }               
         } else if (idade < 100) {
             faixaEtaria = 'idoso(a)'
-            img = '-60-99.jpg'
+            imgNameFile = '-60-99.jpg'
         }
 
-        result_desc.innerHTML = `Você é um(a) ${faixaEtaria} com ${idade} anos de idade!`
-        result_img.src = `images/${sexo}${img}`
+        var img = document.createElement('img')
+        img.setAttribute('id', 'result_img')
+        img.setAttribute('src', `images/${sexo}${imgNameFile}`)
+
+        result.setAttribute('class', 'result')
+        result.innerHTML = `<p>Você é um(a) ${faixaEtaria} com ${idade} anos de idade!</p>`
+        result.appendChild(img)
+        // appendChild(img)
     }
 
     
