@@ -6,11 +6,9 @@ function mascaraData(input) {
 
     // Se não for um número
     if (isNaN(valorDigitado)) {
-        console.log('Não é um número')
         input.value = valor.replace(valorDigitado, '')
     } else {  
         if (tam == 3 || tam == 6) {
-            console.log('colocar barra')
             var adicBarra = valor.slice(0, valor.lastIndexOf(valorDigitado));
             adicBarra += `/${valorDigitado}`
             input.value = adicBarra
