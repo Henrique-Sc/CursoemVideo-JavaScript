@@ -22,7 +22,7 @@ function analisar() {
     erro = 'Valores inválidos! Corrija-os e tente novamente.'
     mes31 = [1, 3, 5, 7, 8, 10, 12]
     mes30 = [4, 6, 9, 11]
-    console.log(newDataNascimento[2]);
+    
     if (newDataNascimento == '' || newDataNascimento[2] > dataAtual[2] || newDataNascimento[2] < 1900 || newDataNascimento[1] > 12 || sexo == 0 || dataNascimento.length != 10 || newDataNascimento[0] < 1 || newDataNascimento[1] < 1) {
         alert(erro)
     } else if ((dataAtual[2] == newDataNascimento[2] && dataAtual[1] == newDataNascimento[1] && dataAtual[0] < newDataNascimento[0])) {
@@ -33,10 +33,8 @@ function analisar() {
         alert(erro)
     } else if ((newDataNascimento[2] % 4 == 0 && newDataNascimento[1] == 2 && newDataNascimento[0] > 29)) {
         alert(erro)
-        console.log(1);
     } else if ((newDataNascimento[2] % 4 != 0 && newDataNascimento[1] == 2 && newDataNascimento[0] > 28)) {
         alert(erro)
-        console.log(2);
     }
     
     else {
