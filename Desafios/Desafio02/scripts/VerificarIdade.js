@@ -34,7 +34,7 @@ function analisar() {
             }
         }
 
-        // Mostrar resultado
+        // Analisando a idade
         var faixaEtaria = 'centenário(a)'
         var imgNameFile = '-100.jpg'
 
@@ -66,14 +66,15 @@ function analisar() {
             imgNameFile = '-60-99.jpg'
         }
 
+        // Criar o elemento img
         var img = document.createElement('img')
         img.setAttribute('id', 'result_img')
         img.setAttribute('src', `images/${sexo}${imgNameFile}`)
 
+        // Mostrar o resultado
         result.setAttribute('class', 'result')
         result.innerHTML = `<p>Você é um(a) ${faixaEtaria} com ${idade} anos de idade!</p>`
         result.appendChild(img)
-        // appendChild(img)
     }
 
     
