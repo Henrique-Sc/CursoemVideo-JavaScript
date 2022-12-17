@@ -11,6 +11,7 @@
 
 	<script src="scripts/VerificarIdade.js"></script>
 	<script src="scripts/FormatarInput.js"></script>
+	<script src="scripts/Mascaras.js"></script>
 
 </head>
 <body onload="FormatarInput()">
@@ -18,9 +19,13 @@
 		<h1 class="title">Desafio 2</h1>
 		<h3 class="descricao textCenter">Verificador de idade</h3>
 
+		<p style="color: red;">Estou atualizando o site, pode ter uns problemas</p>
+
+		
+
 		<!-- Forms -->
 		<p>Data de nascimento:</p>
-		<input type="date" class="input-text" id="dataNascimento" placeholder="Data de nascimento" min="1870-1-1">
+		<input type="text" class="input-text" id="dataNascimento" placeholder="Data de nascimento" maxlength="10" oninput="mascaraData(this)">
 
 		<p>Sexo:</p>
 		<input type="radio" class="input-radio" name="sexo" id="masc" value="homem" checked>
