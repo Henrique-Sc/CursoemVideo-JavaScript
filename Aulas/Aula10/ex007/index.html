@@ -13,7 +13,7 @@
 <body>
 	<div class="container radius">
 		<h1 class="title">Exercício 7</h1>
-		<h3 class="descricao ">Somando valores</h3>
+		<h3 class="descricao textCenter">Somando valores</h3>
 
 		<input type="number" class="input-text" name="n1" id="n1" placeholder="1º número">
 		<input type="number" class="input-text" name="n2" id="n2" placeholder="2º número">
@@ -32,7 +32,8 @@
 			var n2 = Number(document.querySelector('#n2').value)
 			var soma = n1 + n2
 
-			result.innerHTML = `<p>A soma entre ${n1} e ${n2} é igual a ${soma}</p>`
+			result.innerHTML = `<p>A soma entre <span class="code">${n1}</span> e <span class="code">${n2}</span> é igual a <span class="code">${soma}</span>.</p>`
+
 		}
 	</script>
 </body>
