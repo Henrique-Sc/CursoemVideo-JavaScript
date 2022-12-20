@@ -245,6 +245,22 @@ Comando | Resultado
 * [Lista de eventos](https://developer.mozilla.org/en-US/docs/Web/Events)
 
 
+### Criar elementos dinamicamentes
+```
+// Criando uma tag img
+var img = document.createElement('img')
+
+// Colocando atributos
+img.setAttribute('id', 'img')
+img.setAttribute('src', `images/image.png`)
+
+// Adicionando o elemento em algum lugar do site
+document.querySelector('div#result').appendChild(img)
+
+``` 
+
+
+
 ## Condições
 
 <img width="300px" src="https://user-images.githubusercontent.com/96785101/203353138-f6f1c461-58e1-4025-834c-57d0ed8261f5.png">
