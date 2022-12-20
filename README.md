@@ -244,7 +244,6 @@ Comando | Resultado
 
 * [Lista de eventos](https://developer.mozilla.org/en-US/docs/Web/Events)
 
-
 ### Criar elementos dinamicamentes
 ```
 // Criando uma tag img
@@ -258,8 +257,6 @@ img.setAttribute('src', `images/image.png`)
 document.querySelector('div#result').appendChild(img)
 
 ``` 
-
-
 
 ## Condições
 
@@ -319,6 +316,8 @@ if (condição) {
 
 <img width="207" alt="image" src="https://user-images.githubusercontent.com/96785101/204300641-8306c3c4-579f-44e8-beae-267a3da29e5e.png">
 
+
+## Repetições
 
 ---
 
