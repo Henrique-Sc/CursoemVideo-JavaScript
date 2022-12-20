@@ -321,13 +321,30 @@ if (condição) {
 <img width="207" alt="Captura de tela 2022-12-20 113154" src="https://user-images.githubusercontent.com/96785101/208690973-3c377593-de4c-4c73-82bc-d6539404f177.png">
 
 ### While
-
+While - estrutura de repetição com teste lógico no início
 ```
 while (condição) {
- // Enquanto a condição for verdadeira, vai executar o bloco
- 
- // Apenas quando ela for falsa, o loop termina
+    // Bloco
 }
+```
+
+Exemplo:
+```
+function comerPizza() {
+    while (temFatia()) {
+        comerFatia()
+    }
+}
+```
+
+## Do While
+Do While - estrutura de repetição com teste lógico no final
+
+
+```
+do {
+    // bloco
+} while (condição)
 ```
 
 ---
