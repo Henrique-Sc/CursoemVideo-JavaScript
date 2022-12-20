@@ -340,6 +340,7 @@ function comerPizza() {
 ## Do While
 Do While - estrutura de repetição com teste lógico no final
 
+<img width="207" alt="Captura de tela 2022-12-20 120620" src="https://user-images.githubusercontent.com/96785101/208698681-f48383d1-1abe-4bea-8717-c697d7e1b9fa.png">
 
 ```
 do {
