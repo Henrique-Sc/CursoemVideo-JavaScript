@@ -9,7 +9,7 @@ function typingVar() {
 function typingText() {
     if (string.length > 0) {
         element.innerHTML += string.shift();
-        setTimeout('typingText()', 120);
+        setTimeout('typingText()', 70);
     } else {
         element.innerHTML += '_'
         clearTimeout(0);
