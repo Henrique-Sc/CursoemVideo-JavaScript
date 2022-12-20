@@ -318,6 +318,17 @@ if (condição) {
 
 
 ## Repetições
+<img width="207" alt="Captura de tela 2022-12-20 113154" src="https://user-images.githubusercontent.com/96785101/208690973-3c377593-de4c-4c73-82bc-d6539404f177.png">
+
+### While
+
+```
+while (condição) {
+ // Enquanto a condição for verdadeira, vai executar o bloco
+ 
+ // Apenas quando ela for falsa, o loop termina
+}
+```
 
 ---
 
