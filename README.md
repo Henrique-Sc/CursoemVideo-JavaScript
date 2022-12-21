@@ -364,7 +364,7 @@ Como o Do While só realiza o teste lógico do final, ele permite executar o blo
 ### For
 For - extrutura de repetição com variável de controle
 
-
+<img width="207" alt="Captura de tela 2022-12-21 145116" src="https://user-images.githubusercontent.com/96785101/208971492-714bc104-d3ff-445b-a9b0-e773b60baf80.png">
 
 ```
 for (var c=1; c <= 5; c++) {
