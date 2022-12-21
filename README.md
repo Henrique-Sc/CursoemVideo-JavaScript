@@ -337,7 +337,7 @@ function comerPizza() {
 }
 ```
 
-## Do While
+### Do While
 Do While - estrutura de repetição com teste lógico no final
 
 <img width="207" alt="Captura de tela 2022-12-20 120620" src="https://user-images.githubusercontent.com/96785101/208698681-f48383d1-1abe-4bea-8717-c697d7e1b9fa.png">
@@ -346,6 +346,30 @@ Do While - estrutura de repetição com teste lógico no final
 do {
     // bloco
 } while (condição)
+```
+
+Exemplo:
+```
+function comerPizza() {
+    do {
+        comerFatia()
+    } while (temFatia())
+}
+```
+
+#### Qual a diferença entre While e o Do While?
+Como o Do While só realiza o teste lógico do final, ele permite executar o bloco no mínimo uma vez, mesmo o teste lógico dando falso.
+
+
+### For
+For - extrutura de repetição com variável de controle
+
+
+
+```
+for (var c=1; c <= 5; c++) {
+    // Bloco
+}
 ```
 
 ---
