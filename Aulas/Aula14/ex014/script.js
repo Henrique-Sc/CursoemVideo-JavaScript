@@ -31,16 +31,16 @@ function contar() {
         if (i <= f) {
             // Contagem crescente
             for (i; i <= f; i+=p) {
-                result.innerHTML += `${i} 👉 `
+                result.innerHTML += `${i} \u{1F449} `
             }
         } else if (i >= f) {
             // Contagem regressiva
             for (i; i >= f; i-=p) {
-                result.innerHTML += `${i} 👉 `
+                result.innerHTML += `${i} \u{1F449} `
             }
         }
 
         // Contagem finalizada :D
-        result.innerHTML += '🏳️'
+        result.innerHTML += `\u{1F3C1}`
     }
 }
