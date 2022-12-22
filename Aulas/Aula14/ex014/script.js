@@ -34,7 +34,7 @@ function contar() {
                 result.innerHTML += `${i} 👉 `
             }
         } else if (i >= f) {
-            // Contagem decrescente
+            // Contagem regressiva
             for (i; i >= f; i-=p) {
                 result.innerHTML += `${i} 👉 `
             }
