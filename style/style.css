@@ -120,10 +120,8 @@ option {
 }
 
 button {
-	display: block;
 	height: var(--heigthInput);
 	min-width: 100px;
-	margin-top: var(--margin-form);
 	padding: 0px 15px 0px 15px;
 	border: solid 1px;
 	border-radius: var(--radius);	
