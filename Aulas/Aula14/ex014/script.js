@@ -8,7 +8,7 @@ function contar() {
     var result = document.querySelector('#result')
 
     if (inicio == '' || fim == '' || passo == '') {
-        result.innerHTML = '<p>Impossível contar</p>'
+        result.innerHTML = '<p>Impossível contar, valores inválidos.</p>'
     } else {
         result.innerHTML = ''  // "Limpando" a saída dos dados
 
@@ -17,20 +17,26 @@ function contar() {
         var f = Number(fim)
         var p = Number(passo)
 
-        /*
-        -> Caso o passo seja negativo
-        -> Caso o fim seja menor que o início
-        */
-
-        if (p == 0) {
+        // Corrigindo possíveis nuances da variálvel 'p'
+        if (p < 0) {
+            p *= -1
+            alert(`Passo negativo! Considerando PASSO ${p}.`)
+        } else if (p == 0) {
             alert('Passo inválido! Considerando PASSO 1.')
             p = 1
         }
-
-        for (i; i <= f; i+=p) {
-            result.innerHTML += `${i} 👉 `
+        
+        if (i <= f) {
+            for (i; i <= f; i+=p) {
+                result.innerHTML += `${i} 👉 `
+            }
+        } else if (i >= f) {
+            for (i; i >= f; i-=p) {
+                result.innerHTML += `${i} 👉 `
+            }
         }
 
         result.innerHTML += '🏳️'
+        alert(i)
     }
 }
