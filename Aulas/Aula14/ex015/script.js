@@ -13,7 +13,7 @@ function tabuada() {
     var result = document.querySelector('#result')
 
     if (f < i) {
-        result.innerHTML = '<p>Impossível gerar a tabuada, \'fim maior que \'início\'.</p>'
+        result.innerHTML = '<p>Impossível gerar a tabuada, fim maior que início.</p>'
     } else {
         if (f - i >= 1000) {
             alert('O programa terá que processar muitos dados, aguarde por favor.')
