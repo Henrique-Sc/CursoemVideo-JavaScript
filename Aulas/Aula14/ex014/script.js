@@ -42,5 +42,14 @@ function contar() {
 
         // Contagem finalizada :D
         result.innerHTML += `\u{1F3C1}`
+
+        // Colocando a visibilidade do btnLimpar para visível
+        document.querySelector('#btnLimpar').style.visibility = 'visible'
     }
+}
+
+function limpar(btn) {
+    // Reseta o result e oculpa o botão
+    document.querySelector('#result').innerHTML = 'O resultado aparecerá aqui...'
+    btn.style.visibility = 'hidden'
 }
