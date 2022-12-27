@@ -317,7 +317,60 @@ if (condição) {
 <img width="207" alt="image" src="https://user-images.githubusercontent.com/96785101/204300641-8306c3c4-579f-44e8-beae-267a3da29e5e.png">
 
 
+## Repetições
+<img width="207" alt="Captura de tela 2022-12-20 113154" src="https://user-images.githubusercontent.com/96785101/208690973-3c377593-de4c-4c73-82bc-d6539404f177.png">
 
+### While
+While - estrutura de repetição com teste lógico no início
+```
+while (condição) {
+    // Bloco
+}
+```
+
+Exemplo:
+```
+function comerPizza() {
+    while (temFatia()) {
+        comerFatia()
+    }
+}
+```
+
+### Do While
+Do While - estrutura de repetição com teste lógico no final
+
+<img width="207" alt="Captura de tela 2022-12-20 120620" src="https://user-images.githubusercontent.com/96785101/208698681-f48383d1-1abe-4bea-8717-c697d7e1b9fa.png">
+
+```
+do {
+    // bloco
+} while (condição)
+```
+
+Exemplo:
+```
+function comerPizza() {
+    do {
+        comerFatia()
+    } while (temFatia())
+}
+```
+
+#### Qual a diferença entre While e o Do While?
+Como o Do While só realiza o teste lógico do final, ele permite executar o bloco no mínimo uma vez, mesmo o teste lógico dando falso.
+
+
+### For
+For - extrutura de repetição com variável de controle
+
+<img width="207" alt="Captura de tela 2022-12-21 145116" src="https://user-images.githubusercontent.com/96785101/208971492-714bc104-d3ff-445b-a9b0-e773b60baf80.png">
+
+```
+for (var c=1; c <= 5; c++) {
+    // Bloco
+}
+```
 
 ---
 

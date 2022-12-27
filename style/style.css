@@ -97,7 +97,7 @@ select, .input-text {
 	display: block;
 	height: var(--heigthInput);
 	width: var(--widthInput);
-	max-width: 185px;
+	max-width: 170px;
 	margin-bottom: var(--margin-form);
 	padding: 0px 15px 0px 15px;
 	border: 1px solid;
@@ -120,10 +120,8 @@ option {
 }
 
 button {
-	display: block;
 	height: var(--heigthInput);
 	min-width: 100px;
-	margin-top: var(--margin-form);
 	padding: 0px 15px 0px 15px;
 	border: solid 1px;
 	border-radius: var(--radius);	
