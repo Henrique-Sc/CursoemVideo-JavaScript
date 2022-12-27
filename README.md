@@ -372,6 +372,13 @@ for (var c=1; c <= 5; c++) {
 }
 ```
 
+
+## Array
+
+Array (vetor ou uma variável composta) é uma variável que tem vários elementos. Cada elemento é composto por seu valor e por chave de identificação.
+
+`let num = [5, 8, 4]`
+
 ---
 
 [Gustavo Guanabara - Curso de JavaScript](https://gustavoguanabara.github.io/javascript/)
