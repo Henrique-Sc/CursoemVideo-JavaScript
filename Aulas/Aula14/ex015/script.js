@@ -30,6 +30,13 @@ function tabuada() {
             i++
         }
 
+        /* --- Usando o While
+        do {
+            result.innerHTML += `${num} x ${i} = ${num * i}<br>`
+            i++
+        } while (i<= fim)
+        */
+
         // Colocando a visibilidade do btnLimpar para visível
         document.querySelector('#btnLimpar').style.visibility = 'visible'
     }
