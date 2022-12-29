@@ -418,6 +418,14 @@ num.length
 // Retorna o tamanho do array: 5
 ```
 
+### Encontrar um valor no array
+
+```
+num.indexOf(7)
+
+// Retorna o index do valor 7: 3
+```
+
 Para **mais informações** consulte o site: [Array - JavaScript | MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array#m%C3%A9todos)
 
 ---
