@@ -377,10 +377,48 @@ for (var c=1; c <= 5; c++) {
 
 Array (vetor ou uma variável composta) é uma variável que tem vários elementos. Cada elemento é composto por seu valor e por chave de identificação.
 
-`let num = [5, 8, 4]`
+```
+let num = [5, 8, 4]
+```
 
 <img width="207" alt="image" src="https://user-images.githubusercontent.com/96785101/209722035-2f3669db-1c48-4588-b3be-ddda1a5ae47d.png">
 
+### Adicionar valores no array
+
+#### Adiciona na última posição
+```
+num.push(7)  // [5, 8, 4, 7]
+
+// Retorna o tamanho do array após a adição: 4
+```
+
+#### Adicionar na primeira posição
+```
+num.unshift(1) // [1, 5, 8, 4, 7]
+
+// Retorna o tamanho do array após a adição: 5
+```
+
+#### Adicionar em uma posição expecífica
+```
+num[1] = 0  // [1, 0, 8, 4, 7]
+
+// Retorna o valor modificado: 0
+```
+
+### Ordenar array ordem crescente
+```
+num.sort()  // [0, 1, 4, 7, 8]
+```
+
+### Ver tamanho do array
+```
+num.length 
+
+// Retorna o tamanho do array: 5
+```
+
+Para **mais informações** consulte o site: [Array - JavaScript | MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array#m%C3%A9todos)
 
 ---
 
