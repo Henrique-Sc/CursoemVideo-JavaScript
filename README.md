@@ -459,10 +459,11 @@ Para **mais informações** consulte os sites:
 
 ## Funções
 
-São **_ações_** executadas assim que são **chamadas** ou em decorrência de algum **evento**.
-
 <img width="207" alt="Captura de tela 2022-12-29 170520" src="https://user-images.githubusercontent.com/96785101/210075243-a4ea53c5-1e42-410e-b672-af6e0f79ccf9.png">
 
+- São **_ações_** executadas assim que são **chamadas** ou em decorrência de algum **evento**.
+
+- Uma **_função_** pode receber **parâmetros** e retornar um **resultado**
 ---
 
 [Gustavo Guanabara - Curso de JavaScript](https://gustavoguanabara.github.io/javascript/)
