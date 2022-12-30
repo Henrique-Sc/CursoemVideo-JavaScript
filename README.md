@@ -376,9 +376,7 @@ for (var c=1; c <= 5; c++) {
 
 Array (vetor ou uma variável composta) é uma variável que tem vários elementos. Cada elemento é composto por seu valor e por chave de identificação.
 
-```
-let num = [5, 8, 4]
-```
+`let num = [5, 8, 4]`
 
 <img width="207" alt="image" src="https://user-images.githubusercontent.com/96785101/209722035-2f3669db-1c48-4588-b3be-ddda1a5ae47d.png">
 
