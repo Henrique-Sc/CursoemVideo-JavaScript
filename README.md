@@ -460,6 +460,10 @@ Para **mais informações** consulte os sites:
 - [Array - JavaScript | MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array#m%C3%A9todos)
 - [Array.prototype.forEach() - JavaScript | MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
 
+## Funções
+
+São **_ações_** executadas assim que são **chamadas** ou em decorrência de algum **evento**.
+
 ---
 
 [Gustavo Guanabara - Curso de JavaScript](https://gustavoguanabara.github.io/javascript/)
