@@ -464,6 +464,20 @@ Para **mais informações** consulte os sites:
 - São **_ações_** executadas assim que são **chamadas** ou em decorrência de algum **evento**.
 
 - Uma **_função_** pode receber **parâmetros** e retornar um **resultado**
+
+### Exemplos:
+```
+function parImp(n) {
+    if (n % 2 == 0) {
+        return true
+    } else {
+        return false
+    }
+}
+
+let res = parimp(11)  // false
+```
+
 ---
 
 [Gustavo Guanabara - Curso de JavaScript](https://gustavoguanabara.github.io/javascript/)
