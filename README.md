@@ -372,7 +372,6 @@ for (var c=1; c <= 5; c++) {
 }
 ```
 
-
 ## Array
 
 Array (vetor ou uma variável composta) é uma variável que tem vários elementos. Cada elemento é composto por seu valor e por chave de identificação.
@@ -463,6 +462,8 @@ Para **mais informações** consulte os sites:
 ## Funções
 
 São **_ações_** executadas assim que são **chamadas** ou em decorrência de algum **evento**.
+
+<img width="207" alt="Captura de tela 2022-12-29 170520" src="https://user-images.githubusercontent.com/96785101/210075243-a4ea53c5-1e42-410e-b672-af6e0f79ccf9.png">
 
 ---
 
