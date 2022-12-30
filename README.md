@@ -426,7 +426,39 @@ num.indexOf(7)
 // Retorna o index do valor 7: 3
 ```
 
-Para **mais informações** consulte o site: [Array - JavaScript | MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array#m%C3%A9todos)
+### Formas de percorrer um vetor
+
+`let valores = [1, 2, 3, 4, 5]`
+
+#### For
+
+```
+for (let i=0; i < valores.length; i++) {
+    // i -> index
+    // valores[i] -> element
+}
+```
+
+#### For In
+
+```
+for (let i in valores) {
+    // i -> index
+    // valores[i] -> element
+}
+```
+
+#### ForEach
+
+```
+valores.forEach((element, index, array) => {
+    /* ...  */
+})
+```
+
+Para **mais informações** consulte os sites: 
+- [Array - JavaScript | MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array#m%C3%A9todos)
+- [Array.prototype.forEach() - JavaScript | MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
 
 ---
 
