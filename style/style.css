@@ -3,7 +3,7 @@
 
 :root {
 	--margin-form: 15px;
-	--widthInput: 96%;
+	--widthInput: 25%;
 	--heigthInput: 30px;
 	--radius: 15px;
 }
@@ -97,7 +97,7 @@ select, .input-text {
 	display: block;
 	height: var(--heigthInput);
 	width: var(--widthInput);
-	max-width: 170px;
+	max-width: 180px;
 	margin-bottom: var(--margin-form);
 	padding: 0px 15px 0px 15px;
 	border: 1px solid;
