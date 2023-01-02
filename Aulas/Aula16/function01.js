@@ -8,4 +8,8 @@ function parImpar(n) {
     }
 }
 
-console.log(parImpar('12'))
+if (parImpar(3)) {
+    console.log('É PAR');
+} else {
+    console.log('É ÍMPAR');
+}
