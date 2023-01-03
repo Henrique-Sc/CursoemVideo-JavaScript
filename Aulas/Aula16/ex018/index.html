@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Exercício 18: Analisador de números</title>
+
+    <link rel="stylesheet" type="text/css" href="../../../style/style.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container radius">
+        <h1 class="title">Exercício 18</h1>
+        <h3 class="descricao textCenter">Analisador de números</h3>
+
+        <form action="#" method="get">  
+            <label for="fatorial">Insira um número de 1 a 100:</label>
+            <input type="number" class="input-text" id="numero" placeholder="" min="1" max="100">
+
+            <button onclick="adicionar()">Adicionar</button>
+            <button onclick="resetar()" id="btnResetar" style="visibility: hidden">Resetar</button>
+
+            <div class="numeros" id="numeros"><p>Insira</p><p>Um</p><p>Número</p></div>
+
+            <div class="textCenter">
+                <button onclick="finalizar(this)" class="btnFinalizar" id="btnFinalizar" disabled style="cursor: no-drop;">Finalizar</button>
+            </div>
+        </form>
+        
+        <section class="textCenter" id="result">
+            <p>O resultado aparecerá aqui...</p>
+        </section>
+
+    </div>
+</body>
+</html>
