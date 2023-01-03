@@ -14,13 +14,20 @@ function adicionar() {
     } else if (num > 100) {
         result.innerHTML = '<p><span style="color:red">ERRO:</span> Digite um valor menor ou igual a 100.</p>'
     } else {        
+        result.innerHTML = '<p>O resultado aparecerá aqui...</p>'
+
         // Está da forma padrão, sem nehum número
         if (DivNumeros.innerHTML == '<p>Insira</p><p>Um</p><p>Número</p>') {
             DivNumeros.innerHTML = ''
         }
 
+        var arr = Array.prototype.slice.call(DivNumeros.children)
+        lo
+        console.log(DivNumeros.children);
         // Adicionar o número na div
         DivNumeros.innerHTML += `<p>${num}</p>`
+
+        // Ativar o botão Finalizar
         let btnFinalizar = document.querySelector('#btnFinalizar')
         btnFinalizar.disabled = false
         btnFinalizar.style.cursor = 'pointer'
