@@ -1,0 +1,25 @@
+.numeros {
+    margin-top: 15px;
+	margin-bottom: var(--margin-form);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 0 0 0;
+    box-sizing: border-box;
+    border: 1px solid rgb(212, 212, 212);
+    border-radius: var(--radius);
+    max-width: 100px;
+    min-width: 100px;
+}
+
+.numeros p {
+    text-align: center;
+    margin: 0 0 -1px 0;
+    border-radius: var(--radius);
+    width: 100px;
+}
+
+.numeros p:hover {
+	background: rgb(4,0,66);
+	background: linear-gradient(90deg, #665fccd8 0%, rgba(19,137,207,1) 35%, rgba(0,212,255,1) 100%);
+    color: white;
+}
