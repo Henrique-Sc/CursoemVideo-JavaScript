@@ -14,33 +14,30 @@ function adicionar() {
     } else if (num > 100) {
         escreverResult(error('Digte um valor menor ou igual a 100.'))
     } else {        
-        escreverResult('O resultado aparecerá aqui')
-
-        // Está da forma padrão, sem nehum número
-        if (DivNumeros.innerHTML == '<p>Insira</p><p>Um</p><p>Número</p>') {
-            DivNumeros.innerHTML = ''
-
-            // Ativar o botão Finalizar
-            let btnFinalizar = document.querySelector('#btnFinalizar')
-            btnFinalizar.disabled = false
-            btnFinalizar.style.cursor = 'pointer'
+        if (result.innerHTML != '<p>O resultado aparecerá aqui...</p>') {
+            escreverResult('O resultado aparecerá aqui...')
         }
 
         // Pegar os children na DivNumeros
-        var children = Array.prototype.slice.call(DivNumeros.children)
+        var numeros = Array.prototype.slice.call(DivNumeros.children)
 
         // Analisar os valores
         let podeAdicionar = true
-        children.forEach(e => {
+        numeros.forEach(e => {
             if (e.innerHTML == num) {
                 // O número digitado já existe na Div
-                result.innerHTML = '<p>Número já adicionado. Insira outro valor!</p>'
+                escreverResult(error('Número já adicionado.'))
                 podeAdicionar = false
             }
         })
 
         if (podeAdicionar) {
             DivNumeros.innerHTML += `<p>${num}</p>`
+
+            // Ativar o botão Finalizar
+            let btnFinalizar = document.querySelector('#btnFinalizar')
+            btnFinalizar.disabled = false
+            btnFinalizar.style.cursor = 'pointer'
         }
 
     }
@@ -53,18 +50,30 @@ function finalizar(btn) {
     let DivNumeros = document.querySelector('#numeros')
 
     if (DivNumeros.innerHTML == '<p>Insira</p><p>Um</p><p>Número</p>') {
-        result.innerHTML = error('Insira pelo menos um número primeiro!')
+        escreverResult(error('Insira pelo menos um número primeiro!'))
 
     } else {
+        // Preparar o resultado
+        let children = Array.prototype.slice.call(DivNumeros.children)
+        let numeros = []
 
-        escreverResult('', true)
-
-        var children = Array.prototype.slice.call(DivNumeros.children)
-        
-        // Analisar os números
         children.forEach(e => {
-            result.innerHTML += `${e.innerHTML}`
+            numeros.push(Number(e.innerHTML))
         })
+
+        Array.prototype.menor = function() {
+            return Math.min.apply(null, this)
+        }
+
+        Array.prototype.maior = function() {
+            return Math.max.apply(null, this)
+        }
+
+        // Analisar os números
+        numeros.forEach(num => {
+            // console.log(typeof num);
+        })
+
 
         btn.disabled = true
         btn.style.cursor = 'no-drop'
@@ -81,14 +90,15 @@ function resetar() {
 
 
 function error(msg) {
-    return `<p><span style="color:red">ERRO:</span> ${msg}</p>`
+    return `<span style="color:red">ERRO:</span> ${msg}`
 }
 
 
 function escreverResult(msg, sobreescrever=true) {
+    msgF = `<p>${msg}</p>`
     if (sobreescrever) {
-        document.querySelector('#result').innerHTML = msg
+        document.querySelector('#result').innerHTML = msgF
     } else {
-        document.querySelector('#result').innerHTML += msg
+        document.querySelector('#result').innerHTML += msgF
     }
 }
