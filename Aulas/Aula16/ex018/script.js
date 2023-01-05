@@ -69,11 +69,17 @@ function finalizar(btn) {
             return Math.max.apply(null, this)
         }
 
+        let soma = 0
+
         // Analisar os números
         numeros.forEach(num => {
-            // console.log(typeof num);
+            soma += num
         })
 
+        escreverResult(`Maior número: ${numeros.maior()}`, false)
+        escreverResult(`Menor número: ${numeros.menor()}`, false)
+        escreverResult(`Soma total: ${soma}`, false)
+        escreverResult(`Média: ${soma / numeros.length}`, false)
 
         btn.disabled = true
         btn.style.cursor = 'no-drop'
