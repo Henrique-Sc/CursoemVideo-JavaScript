@@ -79,6 +79,20 @@ function adicionar() {
 
 function finalizar() {
     document.querySelector('#btnResetar').style.visibility = 'visible'
+    
+    // Analisar os números
+    Array.prototype.maior = () => {
+        return Math.max.apply(null, this)  
+        
+        // this -> array com todos os números
+        
+        // Dessa forma, é possível usar um array como parâmetro na função Math.max()
+    }
+
+    Array.prototype.menor = () => {
+        return Math.min.apply(null, this)
+    }
+
 }
 
 function resetar() {
