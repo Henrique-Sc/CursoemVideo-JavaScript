@@ -2,6 +2,7 @@
 let numImput = document.querySelector('#numero')
 let numsDiv = document.querySelector('#numeros')
 let result = document.querySelector('#result')
+let btnFinalizar = document.querySelector('#btnFinalizar')
 let numeros = []
 
 function isNum(n) {
@@ -39,6 +40,17 @@ function resetResult() {
     writeResult('O resultado aparecerá aqui...', true)
 }
 
+function buttonFinalizar(sit) {
+    if (sit) {
+        btnFinalizar.disabled = false
+        btnFinalizar.style.cursor = 'pointer'
+    } else {
+        btnFinalizar.disabled = true
+        btnFinalizar.style.cursor = 'no-drop'
+    }
+
+}
+
 function adicionar() {
     resetResult();  // Resetar o resultado
     let num = numImput.value
@@ -52,12 +64,23 @@ function adicionar() {
         valor.textContent = num
         numsDiv.appendChild(valor)
 
+        // Habilitar botão finalizar
+        buttonFinalizar(true)
+
     } else {
         writeResult(error('Valor inválido ou já existente.'), true)
         setTimeout(() => {resetResult()}, 2500);
     }
 
-    // Limpar o input
+    // Preparar para o próximo valor
     numImput.value = ''
     numImput.focus()
+}
+
+function finalizar() {
+    document.querySelector('#btnResetar').style.visibility = 'visible'
+}
+
+function resetar() {
+    location.reload()
 }
