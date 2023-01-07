@@ -4,11 +4,6 @@ let numsDiv = document.querySelector('#numeros')
 let result = document.querySelector('#result')
 let numeros = []
 
-/*
-     - Verificar se o input está vazio ou nn
-     - Verificar se o número é inteiro e se 1 <= num <= 100
-*/
-
 function isNum(n) {
     if (Number(n) >= 1 && Number(n) <= 100) {
         return true
@@ -45,17 +40,24 @@ function resetResult() {
 }
 
 function adicionar() {
-    /*
-    Adicionar o número no array se o valor digitado for um número, se ele não haver o mesmo número no array
-    */
     resetResult();  // Resetar o resultado
     let num = numImput.value
  
     if (isNum(num) && ! inLista(num)) {
+        // Adicionar o valor na lista
         numeros.push(Number(num))
+
+        // Adicionar o valor na div (output para o usuário)
+        let valor = document.createElement('p')
+        valor.textContent = num
+        numsDiv.appendChild(valor)
+
     } else {
         writeResult(error('Valor inválido ou já existente.'), true)
         setTimeout(() => {resetResult()}, 2500);
     }
 
+    // Limpar o input
+    numImput.value = ''
+    numImput.focus()
 }
