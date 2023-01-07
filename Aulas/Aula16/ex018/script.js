@@ -1,101 +1,110 @@
-function adicionar() {
-    // Variáveis de input
-    let num = document.querySelector('#numero').value
-    
-    // Variável de output
-    let result = document.querySelector('#result')
-    let DivNumeros = document.querySelector('#numeros')
+// Declarando variáveis essenciais
+let numImput = document.querySelector('#numero')
+let numsDiv = document.querySelector('#numeros')
+let result = document.querySelector('#result')
+let btnFinalizar = document.querySelector('#btnFinalizar')
+let numeros = []
 
-    // Verificando o input
-    if (num.length <= 0) {
-        escreverResult(error('Digite um valor.'))        
-    } else if (num < 1) {
-        escreverResult(error('Digite um valor maior ou igual a 1.'))
-    } else if (num > 100) {
-        escreverResult(error('Digte um valor menor ou igual a 100.'))
-    } else {        
-        if (result.innerHTML != '<p>O resultado aparecerá aqui...</p>') {
-            escreverResult('O resultado aparecerá aqui...')
-        }
-
-        // Pegar os children na DivNumeros
-        var numeros = Array.prototype.slice.call(DivNumeros.children)
-
-        // Analisar os valores
-        if (numeros.indexOf(num)) {
-            DivNumeros.innerHTML += `<p>${num}</p>`
-
-            // Ativar o botão Finalizar
-            let btnFinalizar = document.querySelector('#btnFinalizar')
-            btnFinalizar.disabled = false
-            btnFinalizar.style.cursor = 'pointer'
-        }
-
+function isNum(n) {
+    if (Number(n) >= 1 && Number(n) <= 100) {
+        return true
+    } else {
+        return false
     }
 }
 
+function inLista(n) {
+    if (numeros.indexOf(Number(n)) != -1) {
+        return true
+    } else {
+        return false
+    }
+}
 
-function finalizar(btn) {
-    // Variável de output
-    let result = document.querySelector('#result')
-    let DivNumeros = document.querySelector('#numeros')
+function error(msg) {
+    // Retorna uma mensagem de erro
+    return `<span style="color: red">ERRO:</span> ${msg}`
+}
 
-    if (DivNumeros.innerHTML == '<p>Insira</p><p>Um</p><p>Número</p>') {
-        escreverResult(error('Insira pelo menos um número primeiro!'))
+function writeResult(msg, substituir=false) {
+    // Escreve algum texto no resultado
+    msgF = `<p>${msg}</p>`
+    if (substituir) {
+        result.innerHTML = msgF
+    } else {
+        result.innerHTML += msgF
+    }
+}
+
+function resetResult() {
+    writeResult('O resultado aparecerá aqui...', true)
+}
+
+function buttonFinalizar(sit) {
+    if (sit) {
+        btnFinalizar.disabled = false
+        btnFinalizar.style.cursor = 'pointer'
+    } else {
+        btnFinalizar.disabled = true
+        btnFinalizar.style.cursor = 'no-drop'
+    }
+
+}
+
+function adicionar() {
+    resetResult();  // Resetar o resultado
+    let num = numImput.value
+ 
+    if (isNum(num) && ! inLista(num)) {
+        // Adicionar o valor na lista
+        numeros.push(Number(num))
+
+        // Adicionar o valor na div (output para o usuário)
+        let valor = document.createElement('p')
+        valor.textContent = num
+        numsDiv.appendChild(valor)
+
+        // Habilitar botão finalizar
+        buttonFinalizar(true)
 
     } else {
-        // Preparar o resultado
-        let children = Array.prototype.slice.call(DivNumeros.children)
-        let numeros = []
-
-        children.forEach(e => {
-            numeros.push(Number(e.innerHTML))
-        })
-
-        Array.prototype.menor = function() {
-            return Math.min.apply(null, this)
-        }
-
-        Array.prototype.maior = function() {
-            return Math.max.apply(null, this)
-        }
-
-        let soma = 0
-
-        // Analisar os números
-        numeros.forEach(num => {
-            soma += num
-        })
-
-        escreverResult(`Maior número: ${numeros.maior()}`)
-        escreverResult(`Menor número: ${numeros.menor()}`, false)
-        escreverResult(`Soma total: ${soma}`, false)
-        escreverResult(`Média: ${soma / numeros.length}`, false)
-
-        btn.disabled = true
-        btn.style.cursor = 'no-drop'
-
-        // Colocando a visibilidade do btnLimpar para visível
-        document.querySelector('#btnResetar').style.visibility = 'visible'
+        writeResult(error('Valor inválido ou já existente.'), true)
+        setTimeout(() => {resetResult()}, 2500);
     }
+
+    // Preparar para o próximo valor
+    numImput.value = ''
+    numImput.focus()
 }
 
+function finalizar() {
+    document.querySelector('#btnResetar').style.visibility = 'visible'
+    
+    // Analisar os números
+    Array.prototype.maior = function() {
+        return Math.max.apply(null, this)  
+    }
+
+    Array.prototype.menor = function() {
+        return Math.min.apply(null, this)
+    }
+    // this -> array com todos os números
+        
+    // Dessa forma, é possível usar um array como parâmetro nas funções Math.max() e Math.min()
+
+    let soma = 0
+    numeros.forEach(num => {
+        soma += num
+    })
+    let media = soma / numeros.length
+
+    // Mostrar o resultado
+    writeResult(`O maior valor foi o ${numeros.maior()}`, true)
+    writeResult(`O menor valor foi o ${numeros.menor()}`)
+    writeResult(`A soma total é ${soma}`)
+    writeResult(`A média do(s) número(s) é ${media}`)
+}
 
 function resetar() {
     location.reload()
-}
-
-
-function error(msg) {
-    return `<span style="color:red">ERRO:</span> ${msg}`
-}
-
-
-function escreverResult(msg, sobreescrever=true) {
-    msgF = `<p>${msg}</p>`
-    if (sobreescrever) {
-        document.querySelector('#result').innerHTML = msgF
-    } else {
-        document.querySelector('#result').innerHTML += msgF
-    }
 }
