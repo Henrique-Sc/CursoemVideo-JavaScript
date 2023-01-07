@@ -22,16 +22,7 @@ function adicionar() {
         var numeros = Array.prototype.slice.call(DivNumeros.children)
 
         // Analisar os valores
-        let podeAdicionar = true
-        numeros.forEach(e => {
-            if (e.innerHTML == num) {
-                // O número digitado já existe na Div
-                escreverResult(error('Número já adicionado.'))
-                podeAdicionar = false
-            }
-        })
-
-        if (podeAdicionar) {
+        if (numeros.indexOf(num)) {
             DivNumeros.innerHTML += `<p>${num}</p>`
 
             // Ativar o botão Finalizar
@@ -76,7 +67,7 @@ function finalizar(btn) {
             soma += num
         })
 
-        escreverResult(`Maior número: ${numeros.maior()}`, false)
+        escreverResult(`Maior número: ${numeros.maior()}`)
         escreverResult(`Menor número: ${numeros.menor()}`, false)
         escreverResult(`Soma total: ${soma}`, false)
         escreverResult(`Média: ${soma / numeros.length}`, false)
