@@ -81,18 +81,28 @@ function finalizar() {
     document.querySelector('#btnResetar').style.visibility = 'visible'
     
     // Analisar os números
-    Array.prototype.maior = () => {
+    Array.prototype.maior = function() {
         return Math.max.apply(null, this)  
-        
-        // this -> array com todos os números
-        
-        // Dessa forma, é possível usar um array como parâmetro na função Math.max()
     }
 
-    Array.prototype.menor = () => {
+    Array.prototype.menor = function() {
         return Math.min.apply(null, this)
     }
+    // this -> array com todos os números
+        
+    // Dessa forma, é possível usar um array como parâmetro nas funções Math.max() e Math.min()
 
+    let soma = 0
+    numeros.forEach(num => {
+        soma += num
+    })
+    let media = soma / numeros.length
+
+    // Mostrar o resultado
+    writeResult(`O maior valor foi o ${numeros.maior()}`, true)
+    writeResult(`O menor valor foi o ${numeros.menor()}`)
+    writeResult(`A soma total é ${soma}`)
+    writeResult(`A média do(s) número(s) é ${media}`)
 }
 
 function resetar() {
