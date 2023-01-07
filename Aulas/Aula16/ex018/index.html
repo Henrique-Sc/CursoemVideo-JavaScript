@@ -9,30 +9,38 @@
 
     <link rel="stylesheet" type="text/css" href="../../../style/style.css">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
 </head>
 <body>
     <div class="container radius">
         <h1 class="title">Exercício 18</h1>
         <h3 class="descricao textCenter">Analisador de números</h3>
 
+        <!--INPUT-->
         <label for="numero">Insira um número de 1 a 100:</label>
         <input type="number" class="input-text" id="numero" placeholder="" min="1" max="100">
+        <!--INPUT-->
 
+        <!-- BUTTONS - Adicionar e Resetar -->
         <button onclick="adicionar()">Adicionar</button>
         <button onclick="resetar()" id="btnResetar" style="visibility: hidden">Resetar</button>
+        <!-- BUTTONS - Adicionar e Resetar -->
 
+        <!-- Mostrar números e btnFinalizar -->
         <div class="numeros" id="numeros"></div>
 
         <div class="textCenter">
-            <button onclick="finalizar(this)" class="btnFinalizar" id="btnFinalizar" disabled style="cursor: no-drop;">Finalizar</button>
+            <button onclick="finalizar(this)" id="btnFinalizar" disabled style="cursor: no-drop;">Finalizar</button>
         </div>
+        <!-- Mostrar números e btnFinalizar -->
         
+        <!-- RESULT -->
         <section class="textCenter" id="result">
             <p>O resultado aparecerá aqui...</p>
         </section>
-        
-        <script src="script_novo.js"></script>
+        <!-- RESULT -->
+
     </div>
+
+    <script src="script_novo.js"></script>
 </body>
 </html>
