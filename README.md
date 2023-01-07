@@ -478,6 +478,12 @@ function parImp(n) {
 let res = parimp(11)  // false
 ```
 
+## Objetos
+
+```
+let amigo = {'nome': 'Gustavo', 'idade': 19, 'sexo': 'M', engordar(p) {}}
+```
+
 ---
 
 [Gustavo Guanabara - Curso de JavaScript](https://gustavoguanabara.github.io/javascript/)
