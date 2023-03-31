@@ -99,7 +99,7 @@ function finalizar() {
     let media = soma / numeros.length
 
     // Mostrar o resultado
-    writeResult(`Ao todo, foi inserido ${numeros.length} valores ao todo.`, true)
+    writeResult(`Ao todo, foi inserido ${numeros.length} valores.`, true)
     writeResult(`O maior número foi o ${numeros.maior()}.`)
     writeResult(`O menor número foi o ${numeros.menor()}.`)
     writeResult(`A soma total é ${soma}.`)
